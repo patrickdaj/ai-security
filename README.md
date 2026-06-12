@@ -45,6 +45,24 @@ end you have a portfolio of ~11 AI-augmented security tools and a capstone
 | 08 | [Cloud & IaC](./modules/08-cloud-iac) | Checkov, tfsec, Prowler, kube-bench | Remediation-as-code generator |
 | 09 | [Detection Engineering](./modules/09-detection-engineering) | Sigma, Wazuh, Zeek | Threat-intel → Sigma rule synthesizer; alert triage |
 | 10 | [LLM/ML Security](./modules/10-llm-security) | garak, PyRIT, promptfoo, Rebuff | Prompt-injection red-team + guardrail harness |
+
+### Phase: Infrastructure & Runtime
+
+Modules 01–10 mostly secure *code and apps*. This phase secures the
+*infrastructure* underneath — identity, the pipeline, the runtime, the hosts,
+and the network — where the hard part is reasoning over graphs and telemetry,
+which is exactly where AI augmentation pays off most.
+
+| # | Module | Tools you tour | What you build with AI |
+|---|--------|----------------|------------------------|
+| 11 | [Cloud Identity & Attack Paths](./modules/11-cloud-identity-attack-paths) | Cartography, PMapper, Steampipe, ScoutSuite | IAM attack-path finder + least-privilege synthesizer |
+| 12 | [CI/CD & Artifact Integrity](./modules/12-cicd-supply-chain) | zizmor, Harden-Runner, Sigstore/cosign, SLSA | Pipeline auditor + provenance generator |
+| 13 | [Container & K8s Runtime](./modules/13-container-k8s-runtime) | Trivy, Falco, Tetragon, Kyverno | Runtime-alert triage + admission-policy generator |
+| 14 | [Host Hardening & Compliance](./modules/14-host-hardening-compliance) | OpenSCAP, Lynis, InSpec, osquery | Remediation-as-code + compliance control mapper |
+| 15 | [Zero Trust (ZTNA)](./modules/15-zero-trust-ztna) | Pomerium, OpenZiti, Teleport, SPIFFE/SPIRE, OPA, Istio | Least-privilege & microsegmentation policy synthesizer |
+
+| # | Module | Tools you tour | What you build with AI |
+|---|--------|----------------|------------------------|
 | ★ | [Capstone](./modules/capstone) | all of the above | An AI security copilot that orchestrates the toolchain |
 
 Work the modules in order — later modules assume the `aug` patterns from

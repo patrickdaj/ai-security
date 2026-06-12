@@ -51,6 +51,17 @@ human gate.
   remediations from modules 01 and 08 — review-gated, never to `main`.
 - Run the copilot in CI against your lab app and fail the build on new
   high-confidence true positives.
+- **Infra coverage:** extend the copilot to run the Infrastructure & Runtime
+  modules — pull cloud IAM attack paths (11), audit the pipeline (12), triage
+  runtime alerts (13), and check host hardening (14) — and correlate across
+  layers (a reachable CVE in code with an over-permissioned role that exposes it
+  is worse than either alone).
+- **Purple-team loop (cloud attack emulation):** add Stratus Red Team / Pacu /
+  Atomic Red Team. Have the copilot pick relevant ATT&CK TTPs for the
+  environment, emulate them (authorized accounts only), check whether your
+  detections (09) and runtime tooling (13) caught them, and — when they didn't —
+  synthesize the missing Sigma/Falco rule. This closes the offense → detection
+  loop across modules 09, 11, 13, and 15.
 
 ## Done when
 

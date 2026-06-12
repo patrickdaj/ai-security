@@ -14,6 +14,27 @@ not a replacement. Keep parsing deterministic, keep the model's job to
 """
 
 from aug.client import AugClient
-from aug.models import Finding, Severity, Triage, TriageVerdict
+from aug.models import (
+    AttackPath,
+    AttackPathStep,
+    Finding,
+    PolicyDraft,
+    Remediation,
+    RuntimeIncident,
+    Severity,
+    Triage,
+    TriageVerdict,
+)
 
-__all__ = ["AugClient", "Finding", "Severity", "Triage", "TriageVerdict"]
+__all__ = [
+    "AugClient",
+    "AttackPath",
+    "AttackPathStep",
+    "Finding",
+    "PolicyDraft",
+    "Remediation",
+    "RuntimeIncident",
+    "Severity",
+    "Triage",
+    "TriageVerdict",
+]
