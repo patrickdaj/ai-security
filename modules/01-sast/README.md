@@ -63,3 +63,12 @@ The better the evidence, the sharper the false-positive culling.
   visibly reduced and each surviving finding has a concrete, code-level fix.
 - You can explain which false positives the model caught and *why the evidence
   let it*.
+
+## Resources
+
+Curated entry points to learn the tools and concepts for this module — official docs and authoritative references. They get you grounded; the build is still yours.
+
+- [Semgrep docs + writing rules](https://semgrep.dev/docs/writing-rules/overview)
+- [CodeQL docs](https://codeql.github.com/docs/)
+- [Bandit](https://bandit.readthedocs.io/)
+- [OWASP Source Code Analysis Tools](https://owasp.org/www-community/Source_Code_Analysis_Tools)

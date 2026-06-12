@@ -53,3 +53,12 @@ syntax, then validate with `suricata -T`.
 - You can drop a pcap in and get back a defensible "what's interesting" summary
   plus at least one Suricata rule that validates and fires only on the bad
   traffic.
+
+## Resources
+
+Curated entry points to learn the tools and concepts for this module — official docs and authoritative references. They get you grounded; the build is still yours.
+
+- [Nmap reference guide](https://nmap.org/book/man.html)
+- [Zeek docs](https://docs.zeek.org/)
+- [Suricata docs](https://docs.suricata.io/)
+- [Malware-Traffic-Analysis (sample pcaps)](https://www.malware-traffic-analysis.net/)

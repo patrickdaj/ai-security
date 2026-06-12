@@ -57,3 +57,13 @@ collapse to one.
 - You can point the generator at a buggy function and get a working harness, and
   turn a folder of crashes into a deduplicated, root-caused, exploitability-rated
   list.
+
+## Resources
+
+Curated entry points to learn the tools and concepts for this module — official docs and authoritative references. They get you grounded; the build is still yours.
+
+- [AFL++](https://aflplus.plus/)
+- [libFuzzer](https://llvm.org/docs/LibFuzzer.html)
+- [Atheris (Python)](https://github.com/google/atheris)
+- [Google fuzzing guide](https://github.com/google/fuzzing)
+- [OSS-Fuzz](https://google.github.io/oss-fuzz/)

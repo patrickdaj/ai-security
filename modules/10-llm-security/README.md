@@ -69,3 +69,13 @@ scorer isn't biased by having authored the attack.
 - You can red-team your own LLM app end-to-end (generate → run → score), stand up
   a guardrail that measurably blocks the attacks, and keep it from regressing in
   CI.
+
+## Resources
+
+Curated entry points to learn the tools and concepts for this module — official docs and authoritative references. They get you grounded; the build is still yours.
+
+- [OWASP Top 10 for LLM Applications](https://genai.owasp.org/)
+- [garak (LLM vuln scanner)](https://github.com/NVIDIA/garak)
+- [Microsoft PyRIT](https://github.com/Azure/PyRIT)
+- [promptfoo red-team](https://www.promptfoo.dev/docs/red-team/)
+- [MITRE ATLAS](https://atlas.mitre.org/)

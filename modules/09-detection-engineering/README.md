@@ -53,3 +53,12 @@ SOC in false positives (the same precision lesson as the Suricata module).
 - You can turn a paragraph of threat intel into a validated Sigma rule that
   compiles to your SIEM, and add a judgment layer to alert triage that measurably
   cuts analyst time on a labeled alert set.
+
+## Resources
+
+Curated entry points to learn the tools and concepts for this module — official docs and authoritative references. They get you grounded; the build is still yours.
+
+- [Sigma + specification](https://github.com/SigmaHQ/sigma)
+- [Wazuh docs](https://documentation.wazuh.com/)
+- [MITRE ATT&CK](https://attack.mitre.org/)
+- [Palantir Alerting & Detection Strategy framework](https://github.com/palantir/alerting-detection-strategy-framework)

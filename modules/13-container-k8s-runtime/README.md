@@ -56,3 +56,13 @@ Two builds:
 - You can turn a Falco firehose into a short, deduplicated incident list with
   next steps, and generate validated admission policies from plain-language
   intent.
+
+## Resources
+
+Curated entry points to learn the tools and concepts for this module — official docs and authoritative references. They get you grounded; the build is still yours.
+
+- [Falco docs](https://falco.org/docs/)
+- [Tetragon docs](https://tetragon.io/docs/)
+- [Kyverno docs](https://kyverno.io/docs/)
+- [OPA Gatekeeper](https://open-policy-agent.github.io/gatekeeper/website/docs/)
+- [NSA/CISA Kubernetes Hardening Guide](https://media.defense.gov/2022/Aug/29/2003066362/-1/-1/0/CTR_KUBERNETES_HARDENING_GUIDANCE_1.2_20220829.PDF)

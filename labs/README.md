@@ -36,3 +36,10 @@ ports beyond localhost. Confirm with `docker compose -f labs/docker-compose.yml 
   you write under `modules/08-cloud-iac/project/`.
 - **LLM security (10):** garak and PyRIT ship their own probe targets; you can
   also stand up a small RAG app to red-team.
+
+## Resources
+
+- [DVWA](https://github.com/digininja/DVWA)
+- [OWASP Juice Shop](https://owasp.org/www-project-juice-shop/)
+- [Vulhub (pre-built vulnerable environments)](https://github.com/vulhub/vulhub)
+- [OWASP Vulnerable Web Applications Directory](https://owasp.org/www-project-vulnerable-web-applications-directory/)

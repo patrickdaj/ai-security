@@ -63,3 +63,13 @@ breaking-change risk — the gate for whether to auto-apply.
 - You can turn a cloud account into a ranked, explained list of real privilege-
   escalation paths with the exact least-privilege fix for each — and you trust
   it because every step traces to an edge the tools actually found.
+
+## Resources
+
+Curated entry points to learn the tools and concepts for this module — official docs and authoritative references. They get you grounded; the build is still yours.
+
+- [Cartography](https://github.com/cartography-cncf/cartography)
+- [PMapper](https://github.com/nccgroup/PMapper)
+- [Steampipe docs](https://steampipe.io/docs)
+- [ScoutSuite](https://github.com/nccgroup/ScoutSuite)
+- [AWS IAM privilege escalation (Rhino Security Labs)](https://rhinosecuritylabs.com/aws/aws-privilege-escalation-methods-mitigation/)

@@ -33,6 +33,9 @@ plugins:
   - search
   - include-markdown
 
+hooks:
+  - mkdocs_hooks.py
+
 markdown_extensions:
   - admonition
   - attr_list

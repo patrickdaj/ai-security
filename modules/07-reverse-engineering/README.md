@@ -58,3 +58,12 @@ behind review, and keep the original names recoverable.
 - You can take a stripped function's pseudo-C and get an accurate summary plus
   applied, meaningful names — and a binary's worth of these turns hours of
   staring into a guided read.
+
+## Resources
+
+Curated entry points to learn the tools and concepts for this module — official docs and authoritative references. They get you grounded; the build is still yours.
+
+- [Ghidra](https://github.com/NationalSecurityAgency/ghidra)
+- [radare2 book](https://book.rada.re/)
+- [angr docs](https://docs.angr.io/)
+- [crackmes.one (practice targets)](https://crackmes.one/)

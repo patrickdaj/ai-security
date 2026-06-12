@@ -58,3 +58,13 @@ that hardens the pipeline auto-merge to a protected branch.
 - You can take a repo's `.github/workflows/`, produce review-ready hardening
   diffs for the real issues, and stand up signing + provenance so unsigned
   artifacts can't deploy.
+
+## Resources
+
+Curated entry points to learn the tools and concepts for this module — official docs and authoritative references. They get you grounded; the build is still yours.
+
+- [SLSA framework](https://slsa.dev/)
+- [Sigstore / cosign](https://docs.sigstore.dev/)
+- [zizmor (Actions auditing)](https://github.com/zizmorcore/zizmor)
+- [OWASP Top 10 CI/CD Security Risks](https://owasp.org/www-project-top-10-ci-cd-security-risks/)
+- [GitHub Actions security hardening](https://docs.github.com/en/actions/security-for-github-actions/security-guides/security-hardening-for-github-actions)

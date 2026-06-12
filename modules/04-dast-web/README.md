@@ -55,3 +55,12 @@ render them, so you can validate before writing.
 - You can hand the generator an advisory and get a template that actually fires
   on a vulnerable target and validates clean — and you can de-noise a raw web
   scan down to the exploitable few.
+
+## Resources
+
+Curated entry points to learn the tools and concepts for this module — official docs and authoritative references. They get you grounded; the build is still yours.
+
+- [OWASP ZAP docs](https://www.zaproxy.org/docs/)
+- [Nuclei + templates](https://github.com/projectdiscovery/nuclei-templates)
+- [sqlmap wiki](https://github.com/sqlmapproject/sqlmap/wiki)
+- [OWASP Web Security Testing Guide](https://owasp.org/www-project-web-security-testing-guide/)

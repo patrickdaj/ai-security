@@ -99,3 +99,13 @@ AUG_BACKEND=ollama python -m aug.smoke
 - `make smoke` returns a sensible typed `Triage`.
 - You can articulate, in two sentences, why the LLM here is a *layer on top of*
   tools rather than a replacement for them.
+
+## Resources
+
+Curated entry points to learn the tools and concepts for this module — official docs and authoritative references. They get you grounded; the build is still yours.
+
+- [OWASP Threat Modeling](https://owasp.org/www-community/Threat_Modeling)
+- [Microsoft STRIDE](https://learn.microsoft.com/en-us/azure/security/develop/threat-modeling-tool-threats)
+- [OWASP Juice Shop](https://owasp.org/www-project-juice-shop/)
+- [DVWA](https://github.com/digininja/DVWA)
+- [Anthropic API docs (structured outputs, tool use)](https://platform.claude.com/docs)

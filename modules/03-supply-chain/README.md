@@ -51,3 +51,13 @@ let it say `needs_review`.
 - You can take a 300-CVE Grype dump and produce a ranked shortlist of *reachable*
   issues with human-readable risk narratives, plus an honest "needs review"
   bucket for the ones the evidence can't decide.
+
+## Resources
+
+Curated entry points to learn the tools and concepts for this module — official docs and authoritative references. They get you grounded; the build is still yours.
+
+- [Syft](https://github.com/anchore/syft)
+- [Grype](https://github.com/anchore/grype)
+- [OSV & OSV-Scanner](https://google.github.io/osv-scanner/)
+- [Trivy](https://trivy.dev/)
+- [CISA SBOM](https://www.cisa.gov/sbom)

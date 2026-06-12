@@ -87,3 +87,14 @@ python modules/15-zero-trust-ztna/project/microseg.py \
   both natural-language intent and observed traffic, shipped safely in dry-run
   with human-gated enforcement — and you can articulate why identity-based authz
   replaces the perimeter.
+
+## Resources
+
+Curated entry points to learn the tools and concepts for this module — official docs and authoritative references. They get you grounded; the build is still yours.
+
+- [NIST SP 800-207 Zero Trust Architecture](https://csrc.nist.gov/pubs/sp/800/207/final)
+- [SPIFFE / SPIRE](https://spiffe.io/docs/)
+- [Pomerium docs](https://www.pomerium.com/docs)
+- [OpenZiti docs](https://openziti.io/docs/)
+- [Istio AuthorizationPolicy](https://istio.io/latest/docs/reference/config/security/authorization-policy/)
+- [Open Policy Agent](https://www.openpolicyagent.org/docs/)

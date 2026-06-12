@@ -67,3 +67,13 @@ Two starter stubs live in [`project/`](./project); the rest you wire yourself.
   severity, and produces a report — with at least one scanner *you* added and
   cross-tool correlation *you* built. The reference got you started; the working
   pipeline is yours.
+
+## Resources
+
+Curated entry points to learn the tools and concepts for this module — official docs and authoritative references. They get you grounded; the build is still yours.
+
+- [GitHub Actions security hardening](https://docs.github.com/en/actions/security-for-github-actions/security-guides/security-hardening-for-github-actions)
+- [GitHub code scanning (SARIF)](https://docs.github.com/en/code-security/code-scanning)
+- [Terraform docs](https://developer.hashicorp.com/terraform/docs)
+- [AWS CodeBuild](https://docs.aws.amazon.com/codebuild/)
+- [Stratus Red Team](https://stratus-red-team.cloud/)

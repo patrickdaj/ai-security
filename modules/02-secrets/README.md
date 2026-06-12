@@ -51,3 +51,11 @@ into the generic `Triage` — secrets have their own categories).
 - You can turn a noisy Gitleaks/TruffleHog run into a short list of
   rotate-now-with-blast-radius items, with the obvious fixtures filtered out —
   and your pipeline never exfiltrates a real secret to do it.
+
+## Resources
+
+Curated entry points to learn the tools and concepts for this module — official docs and authoritative references. They get you grounded; the build is still yours.
+
+- [TruffleHog](https://github.com/trufflesecurity/trufflehog)
+- [Gitleaks](https://github.com/gitleaks/gitleaks)
+- [OWASP Secrets Management Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html)

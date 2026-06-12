@@ -49,3 +49,13 @@ tighten a CIDR), hold high-risk ones (change an IAM policy) for human review.
 
 - You can take an IaC scan and produce review-ready diffs that actually clear the
   findings on re-scan, with risky changes correctly held back for human sign-off.
+
+## Resources
+
+Curated entry points to learn the tools and concepts for this module — official docs and authoritative references. They get you grounded; the build is still yours.
+
+- [Checkov](https://www.checkov.io/)
+- [Trivy (config/IaC, incl. tfsec)](https://trivy.dev/)
+- [Prowler](https://github.com/prowler-cloud/prowler)
+- [kube-bench](https://github.com/aquasecurity/kube-bench)
+- [CIS Benchmarks](https://www.cisecurity.org/cis-benchmarks)

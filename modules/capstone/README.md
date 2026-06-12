@@ -100,3 +100,13 @@ human gate.
 You now have a portfolio: eleven AI-augmented security tools and a copilot that
 orchestrates them. The throughline — *tools find candidates, AI scales the
 judgment, humans gate the irreversible* — is the thing to carry into real work.
+
+## Resources
+
+Curated entry points to learn the tools and concepts for this module — official docs and authoritative references. They get you grounded; the build is still yours.
+
+- [Anthropic: Building effective agents](https://www.anthropic.com/engineering/building-effective-agents)
+- [Anthropic API: tool use](https://platform.claude.com/docs)
+- [Stratus Red Team](https://stratus-red-team.cloud/)
+- [Atomic Red Team](https://github.com/redcanaryco/atomic-red-team)
+- [MITRE ATT&CK](https://attack.mitre.org/)

@@ -32,22 +32,40 @@ end you have a portfolio of ~11 AI-augmented security tools and a capstone
 
 ## Curriculum map
 
+Grouped into phases (the same grouping as the [docs site](https://patrickdaj.github.io/ai-security/) nav).
+
+### Foundations
 | # | Module | Tools you tour | What you build with AI |
 |---|--------|----------------|------------------------|
 | 00 | [Foundations & Lab](./modules/00-foundations) | Docker, DVWA, Juice Shop, threat modeling | The `aug` augmentation library + a safe lab |
+
+### Code & Supply Chain
+| # | Module | Tools you tour | What you build with AI |
+|---|--------|----------------|------------------------|
 | 01 | [SAST](./modules/01-sast) | Semgrep, CodeQL, Bandit | Auto-triage + fix-suggestion engine for SAST findings |
 | 02 | [Secrets](./modules/02-secrets) | TruffleHog, Gitleaks | Secret validator/classifier that kills noise |
 | 03 | [Supply Chain](./modules/03-supply-chain) | Syft, Grype, Trivy, OSV-Scanner | SBOM-driven reachability + risk-narrative generator |
+
+### App & Network
+| # | Module | Tools you tour | What you build with AI |
+|---|--------|----------------|------------------------|
 | 04 | [DAST & Web](./modules/04-dast-web) | OWASP ZAP, Nuclei, sqlmap | Advisory → Nuclei template generator; scan triage |
 | 05 | [Recon & Network](./modules/05-recon-network) | nmap, Zeek, Suricata | PCAP/scan summarizer + detection-rule drafter |
+
+### Offensive & Binary
+| # | Module | Tools you tour | What you build with AI |
+|---|--------|----------------|------------------------|
 | 06 | [Fuzzing](./modules/06-fuzzing) | AFL++, libFuzzer, Atheris | Harness generator + crash triage/dedup/root-cause |
 | 07 | [Reverse Engineering](./modules/07-reverse-engineering) | Ghidra, radare2, angr | Decompiled-function summarizer + rename suggester |
+
+### Detection, Cloud & Response
+| # | Module | Tools you tour | What you build with AI |
+|---|--------|----------------|------------------------|
 | 08 | [Cloud & IaC](./modules/08-cloud-iac) | Checkov, tfsec, Prowler, kube-bench | Remediation-as-code generator |
 | 09 | [Detection Engineering](./modules/09-detection-engineering) | Sigma, Wazuh, Zeek | Threat-intel → Sigma rule synthesizer; alert triage |
 | 10 | [LLM/ML Security](./modules/10-llm-security) | garak, PyRIT, promptfoo, Rebuff | Prompt-injection red-team + guardrail harness |
 
-### Phase: Infrastructure & Runtime
-
+### Infrastructure & Runtime
 Modules 01–10 mostly secure *code and apps*. This phase secures the
 *infrastructure* underneath — identity, the pipeline, the runtime, the hosts,
 and the network — where the hard part is reasoning over graphs and telemetry,
@@ -62,6 +80,7 @@ which is exactly where AI augmentation pays off most.
 | 15 | [Zero Trust (ZTNA)](./modules/15-zero-trust-ztna) | Pomerium, OpenZiti, Teleport, SPIFFE/SPIRE, OPA, Istio | Least-privilege & microsegmentation policy synthesizer |
 | 16 | [Automation & Pipelines](./modules/16-automation-pipelines) | GitHub Actions, Terraform, CodeBuild/EventBridge | Build the headless scan→triage→report pipeline + CI gate + scheduled IaC |
 
+### Capstone
 | # | Module | Tools you tour | What you build with AI |
 |---|--------|----------------|------------------------|
 | ★ | [Capstone](./modules/capstone) | all of the above | An AI security copilot that orchestrates the toolchain |

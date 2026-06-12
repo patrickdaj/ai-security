@@ -55,3 +55,14 @@ re-hardening task.
 - You can take a host scan and produce review-ready Ansible/InSpec remediation
   that clears the findings on re-scan, each tagged with the compliance control
   it satisfies and a breaking-change risk.
+
+## Resources
+
+Curated entry points to learn the tools and concepts for this module — official docs and authoritative references. They get you grounded; the build is still yours.
+
+- [OpenSCAP](https://www.open-scap.org/)
+- [Lynis](https://cisofy.com/documentation/lynis/)
+- [Chef InSpec](https://docs.chef.io/inspec/)
+- [dev-sec.io hardening](https://dev-sec.io/)
+- [osquery](https://osquery.readthedocs.io/)
+- [DISA STIGs](https://public.cyber.mil/stigs/)
