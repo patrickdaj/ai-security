@@ -57,6 +57,18 @@ Two builds:
 > legitimate-but-rare flows. Ship it in *audit/dry-run* mode first, have the
 > model explain each rule, and require human sign-off before enforcement.
 
+A working reference for build #2 lives in
+[`project/microseg.py`](./project/microseg.py): it deterministically aggregates
+observed flows into per-destination allow candidates, then has the model flag
+anomalies (a workload hitting the cloud metadata endpoint; analytics touching
+the prod DB) and emit dry-run Istio `AuthorizationPolicy` YAML for the
+legitimate set. Try it:
+
+```bash
+python modules/15-zero-trust-ztna/project/microseg.py \
+    modules/15-zero-trust-ztna/project/sample_flows.json --out scratch/microseg
+```
+
 ## Exercises
 
 1. Generate an Istio `AuthorizationPolicy` from intent; prove it allows the

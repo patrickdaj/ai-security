@@ -1,0 +1,26 @@
+[
+  {
+    "eventTime": "2026-06-12T18:00:01Z",
+    "eventSource": "iam.amazonaws.com",
+    "eventName": "CreateUser",
+    "userIdentity": {"type": "IAMUser", "userName": "ci-deploy"},
+    "requestParameters": {"userName": "stratus-red-team-malicious-user"}
+  },
+  {
+    "eventTime": "2026-06-12T18:00:03Z",
+    "eventSource": "iam.amazonaws.com",
+    "eventName": "AttachUserPolicy",
+    "userIdentity": {"type": "IAMUser", "userName": "ci-deploy"},
+    "requestParameters": {
+      "userName": "stratus-red-team-malicious-user",
+      "policyArn": "arn:aws:iam::aws:policy/AdministratorAccess"
+    }
+  },
+  {
+    "eventTime": "2026-06-12T18:00:05Z",
+    "eventSource": "iam.amazonaws.com",
+    "eventName": "CreateAccessKey",
+    "userIdentity": {"type": "IAMUser", "userName": "ci-deploy"},
+    "requestParameters": {"userName": "stratus-red-team-malicious-user"}
+  }
+]

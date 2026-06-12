@@ -1,0 +1,9 @@
+[
+  {"source": "frontend", "dest": "catalog",  "port": 8080, "method": "GET",  "path": "/items",  "count": 5400},
+  {"source": "frontend", "dest": "payments", "port": 8080, "method": "POST", "path": "/charge",  "count": 1200},
+  {"source": "payments", "dest": "postgres", "port": 5432, "count": 1190},
+  {"source": "catalog",  "dest": "postgres", "port": 5432, "count": 5300},
+
+  {"source": "analytics", "dest": "postgres", "port": 5432, "count": 40},
+  {"source": "payments",  "dest": "169.254.169.254", "port": 80, "path": "/latest/meta-data/iam/security-credentials/", "count": 3}
+]

@@ -63,6 +63,25 @@ human gate.
   synthesize the missing Sigma/Falco rule. This closes the offense → detection
   loop across modules 09, 11, 13, and 15.
 
+## Project starters
+
+- [`project/purple_loop.py`](./project/purple_loop.py) — a working cloud
+  purple-team loop: the model plans relevant Stratus Red Team techniques,
+  detonation runs them (behind a hard authorization gate), the model judges
+  whether your telemetry caught each one, and for gaps it synthesizes the
+  missing Sigma rule. Runs safely in dry-run over a recorded events file:
+
+  ```bash
+  python modules/capstone/project/purple_loop.py \
+      --env-desc env.txt \
+      --events modules/capstone/project/sample_cloudtrail.json
+  ```
+
+  Live detonation (`--live`) is refused unless you also pass `--i-am-authorized`
+  and set `STRATUS_ALLOW=1` — real attack techniques against a real account
+  require explicit, multi-signal authorization. That gate is the point: the AI
+  plans and writes detections; a human authorizes the irreversible step.
+
 ## Done when
 
 - One command against your lab target produces a prioritized, cross-correlated,
