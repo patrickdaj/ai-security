@@ -630,6 +630,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resources
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1564,6 +1575,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resources
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1609,7 +1631,7 @@ reason about for each finding.</p>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a> → Finding     code/packet   typed Triage, not        anything irreversible;
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>   schema      /advisory     prose                     surface confidence
 </code></pre></div>
-<p>This is implemented once in <a href="../../aug"><code>aug/</code></a>. Read these three files now:</p>
+<p>This is implemented once in <a href="https://github.com/patrickdaj/ai-security/tree/main/aug"><code>aug/</code></a>. Read these three files now:</p>
 <ul>
 <li><code>aug/models.py</code> — the normalized <code>Finding</code> and <code>Triage</code> schemas.</li>
 <li><code>aug/client.py</code> — <code>AugClient.reason()</code> returns typed Pydantic via structured
@@ -1624,7 +1646,7 @@ lets you trust an LLM in an automated security pipeline.</p>
 <h2 id="lab">Lab<a class="headerlink" href="#lab" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>make<span class="w"> </span>lab-up<span class="w">      </span><span class="c1"># DVWA, Juice Shop, (your vuln-app) on an isolated network</span>
 </code></pre></div>
-<p>See <a href="../../labs/README.md"><code>labs/README.md</code></a>. <strong>Localhost only. Authorized
+<p>See <a href="https://github.com/patrickdaj/ai-security/blob/main/labs/README.md"><code>labs/README.md</code></a>. <strong>Localhost only. Authorized
 targets only.</strong></p>
 <h2 id="project-get-the-ai-layer-running">Project: get the AI layer running<a class="headerlink" href="#project-get-the-ai-layer-running" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>.venv<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">source</span><span class="w"> </span>.venv/bin/activate
@@ -1660,6 +1682,15 @@ section). To try local:</p>
 <li><code>make smoke</code> returns a sensible typed <code>Triage</code>.</li>
 <li>You can articulate, in two sentences, why the LLM here is a <em>layer on top of</em>
   tools rather than a replacement for them.</li>
+</ul>
+<h2 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">&para;</a></h2>
+<p>Curated entry points to learn the tools and concepts for this module — official docs and authoritative references. They get you grounded; the build is still yours.</p>
+<ul>
+<li><a href="https://owasp.org/www-community/Threat_Modeling">OWASP Threat Modeling</a></li>
+<li><a href="https://learn.microsoft.com/en-us/azure/security/develop/threat-modeling-tool-threats">Microsoft STRIDE</a></li>
+<li><a href="https://owasp.org/www-project-juice-shop/">OWASP Juice Shop</a></li>
+<li><a href="https://github.com/digininja/DVWA">DVWA</a></li>
+<li><a href="https://platform.claude.com/docs">Anthropic API docs (structured outputs, tool use)</a></li>
 </ul>
 
 

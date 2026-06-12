@@ -1172,6 +1172,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resources
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1442,6 +1453,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resources
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1491,7 +1513,7 @@ paths and explaining them is where the model earns its keep.</p>
 <h2 id="ai-augmentation-attack-path-finder-least-privilege-synthesizer">AI augmentation: attack-path finder + least-privilege synthesizer<a class="headerlink" href="#ai-augmentation-attack-path-finder-least-privilege-synthesizer" title="Permanent link">&para;</a></h2>
 <p>Build a tool that pulls candidate paths/edges (from PMapper or a Cartography
 Cypher query), feeds the relevant subgraph to the model, and returns typed
-<a href="../../aug/models.py"><code>AttackPath</code></a> results: entrypoint → target, the steps, a
+<a href="https://github.com/patrickdaj/ai-security/blob/main/aug/models.py"><code>AttackPath</code></a> results: entrypoint → target, the steps, a
 severity and confidence, a plain-language narrative, and <strong>the minimal policy
 change that breaks the path</strong>.</p>
 <p>Then a second build: given a principal's <em>actual</em> used actions (from CloudTrail
@@ -1516,6 +1538,15 @@ hallucinate reachability.</p>
 <li>You can turn a cloud account into a ranked, explained list of real privilege-
   escalation paths with the exact least-privilege fix for each — and you trust
   it because every step traces to an edge the tools actually found.</li>
+</ul>
+<h2 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">&para;</a></h2>
+<p>Curated entry points to learn the tools and concepts for this module — official docs and authoritative references. They get you grounded; the build is still yours.</p>
+<ul>
+<li><a href="https://github.com/cartography-cncf/cartography">Cartography</a></li>
+<li><a href="https://github.com/nccgroup/PMapper">PMapper</a></li>
+<li><a href="https://steampipe.io/docs">Steampipe docs</a></li>
+<li><a href="https://github.com/nccgroup/ScoutSuite">ScoutSuite</a></li>
+<li><a href="https://rhinosecuritylabs.com/aws/aws-privilege-escalation-methods-mitigation/">AWS IAM privilege escalation (Rhino Security Labs)</a></li>
 </ul>
 
 

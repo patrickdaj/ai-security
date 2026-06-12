@@ -1306,6 +1306,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resources
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1430,6 +1441,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resources
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1453,9 +1475,9 @@ This module is where <em>you</em> turn it into automation: a headless pipeline, 
 gate, and Terraform that runs it on a schedule. The deliverable is a system that
 scans, triages, and reports with no human in the loop — until the gate.</p>
 <blockquote>
-<p><strong>There is a working reference in this repo</strong> — <a href="../../automation"><code>automation/</code></a>,
-<a href="../../.github/workflows"><code>.github/workflows/</code></a>, and
-<a href="../../terraform/automation"><code>terraform/automation/</code></a>. Treat it the way you'd
+<p><strong>There is a working reference in this repo</strong> — <a href="https://github.com/patrickdaj/ai-security/tree/main/automation"><code>automation/</code></a>,
+<a href="https://github.com/patrickdaj/ai-security/tree/main/.github/workflows"><code>.github/workflows/</code></a>, and
+<a href="https://github.com/patrickdaj/ai-security/tree/main/terraform/automation"><code>terraform/automation/</code></a>. Treat it the way you'd
 treat a worked solution: read it, run it, then <strong>build the tasks below</strong> to
 make it yours. The build is the point; the reference is there so you're never
 stuck and so the repo has live CI to extend.</p>
@@ -1478,12 +1500,12 @@ stuck and so the repo has live CI to extend.</p>
 the seams you'll extend: the scanner <code>REGISTRY</code>, the gate logic, the CI trigger,
 the Terraform target.</p>
 <h2 id="build-tasks-the-project">Build tasks (the project)<a class="headerlink" href="#build-tasks-the-project" title="Permanent link">&para;</a></h2>
-<p>Two starter stubs live in <a href="../../modules/16-automation-pipelines/project"><code>project/</code></a>; the rest you wire yourself.</p>
+<p>Two starter stubs live in <a href="https://github.com/patrickdaj/ai-security/tree/main/modules/16-automation-pipelines/project"><code>project/</code></a>; the rest you wire yourself.</p>
 <ol>
-<li><strong>Add a scanner.</strong> Complete <a href="../../modules/16-automation-pipelines/project/checkov_adapter.py"><code>project/checkov_adapter.py</code></a>
+<li><strong>Add a scanner.</strong> Complete <a href="https://github.com/patrickdaj/ai-security/blob/main/modules/16-automation-pipelines/project/checkov_adapter.py"><code>project/checkov_adapter.py</code></a>
    so IaC misconfigurations (point it at module 08's Terraform target) flow
    through the same pipeline. Register it in <code>automation.scanners.REGISTRY</code>.</li>
-<li><strong>Correlate across tools.</strong> Complete <a href="../../modules/16-automation-pipelines/project/correlate.py"><code>project/correlate.py</code></a>:
+<li><strong>Correlate across tools.</strong> Complete <a href="https://github.com/patrickdaj/ai-security/blob/main/modules/16-automation-pipelines/project/correlate.py"><code>project/correlate.py</code></a>:
    join findings by file / package / endpoint and have the model assess combined
    risk — the capstone's "three mediums are one critical" insight, as code.</li>
 <li><strong>Gate PRs.</strong> Make <code>security-scan.yml</code> <em>fail the check</em> on a new
@@ -1510,6 +1532,15 @@ the Terraform target.</p>
   severity, and produces a report — with at least one scanner <em>you</em> added and
   cross-tool correlation <em>you</em> built. The reference got you started; the working
   pipeline is yours.</li>
+</ul>
+<h2 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">&para;</a></h2>
+<p>Curated entry points to learn the tools and concepts for this module — official docs and authoritative references. They get you grounded; the build is still yours.</p>
+<ul>
+<li><a href="https://docs.github.com/en/actions/security-for-github-actions/security-guides/security-hardening-for-github-actions">GitHub Actions security hardening</a></li>
+<li><a href="https://docs.github.com/en/code-security/code-scanning">GitHub code scanning (SARIF)</a></li>
+<li><a href="https://developer.hashicorp.com/terraform/docs">Terraform docs</a></li>
+<li><a href="https://docs.aws.amazon.com/codebuild/">AWS CodeBuild</a></li>
+<li><a href="https://stratus-red-team.cloud/">Stratus Red Team</a></li>
 </ul>
 
 

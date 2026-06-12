@@ -1256,6 +1256,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resources
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1442,6 +1453,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resources
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1485,7 +1507,7 @@ lives in <em>your</em> config (sshd_config, sysctl, a systemd unit) and must map
 framework control — both perfect for the model.</p>
 <h2 id="ai-augmentation-remediation-as-code-control-mapper">AI augmentation: remediation-as-code + control mapper<a class="headerlink" href="#ai-augmentation-remediation-as-code-control-mapper" title="Permanent link">&para;</a></h2>
 <p>Build a tool that ingests OpenSCAP/Lynis findings, reads the relevant host
-config into <code>.context</code>, and returns a <a href="../../aug/models.py"><code>Remediation</code></a>: an
+config into <code>.context</code>, and returns a <a href="https://github.com/patrickdaj/ai-security/blob/main/aug/models.py"><code>Remediation</code></a>: an
 Ansible task (or InSpec test + fix) that satisfies the control, a
 breaking-change risk, and the <code>compliance_controls</code> it maps to (CIS / SOC2 /
 PCI). Use the breaking-change risk as the gate: auto-apply benign hardening
@@ -1507,6 +1529,16 @@ re-hardening task.</p>
 <li>You can take a host scan and produce review-ready Ansible/InSpec remediation
   that clears the findings on re-scan, each tagged with the compliance control
   it satisfies and a breaking-change risk.</li>
+</ul>
+<h2 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">&para;</a></h2>
+<p>Curated entry points to learn the tools and concepts for this module — official docs and authoritative references. They get you grounded; the build is still yours.</p>
+<ul>
+<li><a href="https://www.open-scap.org/">OpenSCAP</a></li>
+<li><a href="https://cisofy.com/documentation/lynis/">Lynis</a></li>
+<li><a href="https://docs.chef.io/inspec/">Chef InSpec</a></li>
+<li><a href="https://dev-sec.io/">dev-sec.io hardening</a></li>
+<li><a href="https://osquery.readthedocs.io/">osquery</a></li>
+<li><a href="https://public.cyber.mil/stigs/">DISA STIGs</a></li>
 </ul>
 
 

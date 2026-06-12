@@ -1425,42 +1425,42 @@ local Ollama backend) to generate live results. They live under each module's
 <tbody>
 <tr>
 <td>01 SAST</td>
-<td><a href="../modules/01-sast/example-output/sast-triage-report.md">sast-triage-report.md</a></td>
+<td><a href="https://github.com/patrickdaj/ai-security/blob/main/modules/01-sast/example-output/sast-triage-report.md">sast-triage-report.md</a></td>
 <td>47 findings → 11 actionable, false positives killed with reasons</td>
 </tr>
 <tr>
 <td>03 Supply chain</td>
-<td><a href="../modules/03-supply-chain/example-output/reachability-report.md">reachability-report.md</a></td>
+<td><a href="https://github.com/patrickdaj/ai-security/blob/main/modules/03-supply-chain/example-output/reachability-report.md">reachability-report.md</a></td>
 <td>312 CVEs → 2 reachable, with exploit narratives</td>
 </tr>
 <tr>
 <td>04 DAST</td>
-<td><a href="../modules/04-dast-web/example-output/git-config-exposure.nuclei.yaml">git-config-exposure.nuclei.yaml</a></td>
+<td><a href="https://github.com/patrickdaj/ai-security/blob/main/modules/04-dast-web/example-output/git-config-exposure.nuclei.yaml">git-config-exposure.nuclei.yaml</a></td>
 <td>advisory → a valid Nuclei detection template</td>
 </tr>
 <tr>
 <td>09 Detection</td>
-<td><a href="../modules/09-detection-engineering/example-output/iam-create-admin-user.sigma.yml">iam-create-admin-user.sigma.yml</a></td>
+<td><a href="https://github.com/patrickdaj/ai-security/blob/main/modules/09-detection-engineering/example-output/iam-create-admin-user.sigma.yml">iam-create-admin-user.sigma.yml</a></td>
 <td>threat intel → a tagged, convertible Sigma rule</td>
 </tr>
 <tr>
 <td>11 Cloud identity</td>
-<td><a href="../modules/11-cloud-identity-attack-paths/example-output/attack-path-report.md">attack-path-report.md</a></td>
+<td><a href="https://github.com/patrickdaj/ai-security/blob/main/modules/11-cloud-identity-attack-paths/example-output/attack-path-report.md">attack-path-report.md</a></td>
 <td>IAM graph → 2 end-to-end attack paths + least-priv fixes</td>
 </tr>
 <tr>
 <td>13 K8s runtime</td>
-<td><a href="../modules/13-container-k8s-runtime/example-output/disallow-privileged.kyverno.yaml">disallow-privileged.kyverno.yaml</a> · <a href="../modules/13-container-k8s-runtime/example-output/falco-incident-triage.md">falco-incident-triage.md</a></td>
+<td><a href="https://github.com/patrickdaj/ai-security/blob/main/modules/13-container-k8s-runtime/example-output/disallow-privileged.kyverno.yaml">disallow-privileged.kyverno.yaml</a> · <a href="https://github.com/patrickdaj/ai-security/blob/main/modules/13-container-k8s-runtime/example-output/falco-incident-triage.md">falco-incident-triage.md</a></td>
 <td>NL intent → admission policy; 1,284 alerts → 1 incident</td>
 </tr>
 <tr>
 <td>15 ZTNA</td>
-<td><a href="../modules/15-zero-trust-ztna/example-output/microseg-policies.yaml">microseg-policies.yaml</a> · <a href="../modules/15-zero-trust-ztna/example-output/anomalies.md">anomalies.md</a></td>
+<td><a href="https://github.com/patrickdaj/ai-security/blob/main/modules/15-zero-trust-ztna/example-output/microseg-policies.yaml">microseg-policies.yaml</a> · <a href="https://github.com/patrickdaj/ai-security/blob/main/modules/15-zero-trust-ztna/example-output/anomalies.md">anomalies.md</a></td>
 <td>observed traffic → default-deny Istio policies + flagged anomalies</td>
 </tr>
 <tr>
 <td>★ Capstone</td>
-<td><a href="../modules/capstone/example-output/security-report.md">security-report.md</a> · <a href="../modules/capstone/example-output/purple-team-report.md">purple-team-report.md</a></td>
+<td><a href="https://github.com/patrickdaj/ai-security/blob/main/modules/capstone/example-output/security-report.md">security-report.md</a> · <a href="https://github.com/patrickdaj/ai-security/blob/main/modules/capstone/example-output/purple-team-report.md">purple-team-report.md</a></td>
 <td>600+ findings → 3 cross-correlated risks; purple-team gap closure</td>
 </tr>
 </tbody>
@@ -1468,16 +1468,16 @@ local Ollama backend) to generate live results. They live under each module's
 <h2 id="automation-the-deliverables-generated-unattended">Automation (the deliverables, generated unattended)<a class="headerlink" href="#automation-the-deliverables-generated-unattended" title="Permanent link">&para;</a></h2>
 <p>These artifacts aren't just hand-run — the same pipeline produces them headless.
 You build this pipeline yourself in
-<a href="../modules/16-automation-pipelines">module 16</a>; the code below is the reference
+<a href="https://github.com/patrickdaj/ai-security/tree/main/modules/16-automation-pipelines">module 16</a>; the code below is the reference
 solution it extends:</p>
 <ul>
-<li><a href="../automation"><code>automation/</code></a> — <code>python -m automation</code> / <code>aug-pipeline</code>: scan
+<li><a href="https://github.com/patrickdaj/ai-security/tree/main/automation"><code>automation/</code></a> — <code>python -m automation</code> / <code>aug-pipeline</code>: scan
   → triage → <code>report.md</code> + <code>report.json</code>, severity-gated exit code.</li>
-<li><a href="../.github/workflows/security-scan.yml"><code>.github/workflows/security-scan.yml</code></a>
+<li><a href="https://github.com/patrickdaj/ai-security/blob/main/.github/workflows/security-scan.yml"><code>.github/workflows/security-scan.yml</code></a>
   — runs it on a schedule and uploads the report; the repo scans itself.</li>
-<li><a href="../terraform/automation"><code>terraform/automation/</code></a> — the pipeline as a scheduled
+<li><a href="https://github.com/patrickdaj/ai-security/tree/main/terraform/automation"><code>terraform/automation/</code></a> — the pipeline as a scheduled
   AWS job (EventBridge → CodeBuild → encrypted S3). Infra-as-code, hardened.</li>
-<li><a href="../modules/08-cloud-iac/project/terraform"><code>modules/08-cloud-iac/project/terraform/</code></a>
+<li><a href="https://github.com/patrickdaj/ai-security/tree/main/modules/08-cloud-iac/project/terraform"><code>modules/08-cloud-iac/project/terraform/</code></a>
   — a misconfigured module to scan (the target, not the automation).</li>
 </ul>
 <h2 id="the-throughline-these-show">The throughline these show<a class="headerlink" href="#the-throughline-these-show" title="Permanent link">&para;</a></h2>

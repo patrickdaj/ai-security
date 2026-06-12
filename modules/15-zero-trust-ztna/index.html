@@ -1284,6 +1284,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resources
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1442,6 +1453,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resources
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1497,7 +1519,7 @@ better, <em>inferable from the traffic you already see</em>.</p>
 <ol>
 <li><strong>Policy from intent.</strong> Given a natural-language access rule ("only the
    checkout service may call payments, only over mTLS, only POST /charge"),
-   generate a <a href="../../aug/models.py"><code>PolicyDraft</code></a> — Istio <code>AuthorizationPolicy</code>,
+   generate a <a href="https://github.com/patrickdaj/ai-security/blob/main/aug/models.py"><code>PolicyDraft</code></a> — Istio <code>AuthorizationPolicy</code>,
    Oathkeeper rule, Pomerium policy, or Rego — render it, and validate
    (<code>opa eval</code>, <code>istioctl analyze</code>) against allow/deny test cases.</li>
 <li><strong>Microsegmentation from observed traffic.</strong> This is the high-value one and it
@@ -1512,8 +1534,8 @@ better, <em>inferable from the traffic you already see</em>.</p>
 legitimate-but-rare flows. Ship it in <em>audit/dry-run</em> mode first, have the
 model explain each rule, and require human sign-off before enforcement.</p>
 </blockquote>
-<p>Build #2 in <a href="../../modules/15-zero-trust-ztna/project/microseg.py"><code>project/microseg.py</code></a> (a stub); the worked
-answer is <a href="../../modules/15-zero-trust-ztna/reference/microseg.py"><code>reference/microseg.py</code></a>. It deterministically
+<p>Build #2 in <a href="https://github.com/patrickdaj/ai-security/blob/main/modules/15-zero-trust-ztna/project/microseg.py"><code>project/microseg.py</code></a> (a stub); the worked
+answer is <a href="https://github.com/patrickdaj/ai-security/blob/main/modules/15-zero-trust-ztna/reference/microseg.py"><code>reference/microseg.py</code></a>. It deterministically
 aggregates observed flows into per-destination allow candidates, then has the model flag
 anomalies (a workload hitting the cloud metadata endpoint; analytics touching
 the prod DB) and emit dry-run Istio <code>AuthorizationPolicy</code> YAML for the
@@ -1539,6 +1561,16 @@ legitimate set. Try it:</p>
   both natural-language intent and observed traffic, shipped safely in dry-run
   with human-gated enforcement — and you can articulate why identity-based authz
   replaces the perimeter.</li>
+</ul>
+<h2 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">&para;</a></h2>
+<p>Curated entry points to learn the tools and concepts for this module — official docs and authoritative references. They get you grounded; the build is still yours.</p>
+<ul>
+<li><a href="https://csrc.nist.gov/pubs/sp/800/207/final">NIST SP 800-207 Zero Trust Architecture</a></li>
+<li><a href="https://spiffe.io/docs/">SPIFFE / SPIRE</a></li>
+<li><a href="https://www.pomerium.com/docs">Pomerium docs</a></li>
+<li><a href="https://openziti.io/docs/">OpenZiti docs</a></li>
+<li><a href="https://istio.io/latest/docs/reference/config/security/authorization-policy/">Istio AuthorizationPolicy</a></li>
+<li><a href="https://www.openpolicyagent.org/docs/">Open Policy Agent</a></li>
 </ul>
 
 

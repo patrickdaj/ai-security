@@ -1228,6 +1228,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resources
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1442,6 +1453,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resources
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1487,13 +1509,13 @@ analyst's pain — and the augmentation's job.</p>
 <p>Two builds:</p>
 <ol>
 <li><strong>Runtime triage.</strong> Ingest Falco/Tetragon alerts (with the process tree /
-   syscall context) and return typed <a href="../../aug/models.py"><code>RuntimeIncident</code></a>:
+   syscall context) and return typed <a href="https://github.com/patrickdaj/ai-security/blob/main/aug/models.py"><code>RuntimeIncident</code></a>:
    verdict, severity, a <code>dedup_key</code> derived from <em>root cause</em> (so the 400 alerts
    from one cron job collapse to one), the likely ATT&amp;CK technique, and the next
    investigative step.</li>
 <li><strong>Admission-policy generator.</strong> Given a natural-language intent ("no
    containers may run as root or mount the docker socket"), generate a
-   <a href="../../aug/models.py"><code>PolicyDraft</code></a> — Kyverno or Rego — render it, and
+   <a href="https://github.com/patrickdaj/ai-security/blob/main/aug/models.py"><code>PolicyDraft</code></a> — Kyverno or Rego — render it, and
    validate with <code>kyverno apply</code> / <code>conftest</code> against allow/deny fixtures.</li>
 </ol>
 <h2 id="exercises">Exercises<a class="headerlink" href="#exercises" title="Permanent link">&para;</a></h2>
@@ -1510,6 +1532,15 @@ analyst's pain — and the augmentation's job.</p>
 <li>You can turn a Falco firehose into a short, deduplicated incident list with
   next steps, and generate validated admission policies from plain-language
   intent.</li>
+</ul>
+<h2 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">&para;</a></h2>
+<p>Curated entry points to learn the tools and concepts for this module — official docs and authoritative references. They get you grounded; the build is still yours.</p>
+<ul>
+<li><a href="https://falco.org/docs/">Falco docs</a></li>
+<li><a href="https://tetragon.io/docs/">Tetragon docs</a></li>
+<li><a href="https://kyverno.io/docs/">Kyverno docs</a></li>
+<li><a href="https://open-policy-agent.github.io/gatekeeper/website/docs/">OPA Gatekeeper</a></li>
+<li><a href="https://media.defense.gov/2022/Aug/29/2003066362/-1/-1/0/CTR_KUBERNETES_HARDENING_GUIDANCE_1.2_20220829.PDF">NSA/CISA Kubernetes Hardening Guide</a></li>
 </ul>
 
 

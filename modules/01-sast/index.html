@@ -656,6 +656,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resources
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1442,6 +1453,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resources
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1487,7 +1509,7 @@ That missing reasoning is your augmentation's job.</p>
 <p>Build a CLI that ingests Semgrep/Bandit JSON, normalizes each result into a
 <code>Finding</code> (pulling the surrounding code into <code>.context</code>), runs it through the
 shared triage engine, and emits a ranked, de-noised report with concrete fixes.</p>
-<p>The skeleton lives in <a href="../../modules/01-sast/project"><code>project/</code></a>:</p>
+<p>The skeleton lives in <a href="https://github.com/patrickdaj/ai-security/tree/main/modules/01-sast/project"><code>project/</code></a>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>python<span class="w"> </span>modules/01-sast/project/triage_sast.py<span class="w"> </span>scratch/semgrep.json
 </code></pre></div>
 <p>Key idea: <strong>enrichment is what makes the triage good.</strong> A finding with just a
@@ -1512,6 +1534,14 @@ The better the evidence, the sharper the false-positive culling.</p>
   visibly reduced and each surviving finding has a concrete, code-level fix.</li>
 <li>You can explain which false positives the model caught and <em>why the evidence
   let it</em>.</li>
+</ul>
+<h2 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">&para;</a></h2>
+<p>Curated entry points to learn the tools and concepts for this module — official docs and authoritative references. They get you grounded; the build is still yours.</p>
+<ul>
+<li><a href="https://semgrep.dev/docs/writing-rules/overview">Semgrep docs + writing rules</a></li>
+<li><a href="https://codeql.github.com/docs/">CodeQL docs</a></li>
+<li><a href="https://bandit.readthedocs.io/">Bandit</a></li>
+<li><a href="https://owasp.org/www-community/Source_Code_Analysis_Tools">OWASP Source Code Analysis Tools</a></li>
 </ul>
 
 

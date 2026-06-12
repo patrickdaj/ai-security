@@ -1348,6 +1348,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resources
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1448,6 +1459,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resources
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1527,14 +1549,14 @@ human gate.</p>
 </ul>
 <h2 id="project-starters">Project starters<a class="headerlink" href="#project-starters" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="../../automation"><code>automation/</code></a> (repo root) — the <strong>headless version of this
+<li><a href="https://github.com/patrickdaj/ai-security/tree/main/automation"><code>automation/</code></a> (repo root) — the <strong>headless version of this
   capstone</strong>: <code>python -m automation</code> runs the scan → normalize → triage → report
   workflow unattended, with a severity-gated exit code. It's wired into CI
   (<code>security-scan.yml</code>) and can run on a schedule in AWS via
-  <a href="../../terraform/automation"><code>terraform/automation/</code></a>. Extend it with the
+  <a href="https://github.com/patrickdaj/ai-security/tree/main/terraform/automation"><code>terraform/automation/</code></a>. Extend it with the
   cross-tool correlation described above.</li>
-<li><a href="../../modules/capstone/project/purple_loop.py"><code>project/purple_loop.py</code></a> — build the cloud
-  purple-team loop (worked answer: <a href="../../modules/capstone/reference/purple_loop.py"><code>reference/purple_loop.py</code></a>):
+<li><a href="https://github.com/patrickdaj/ai-security/blob/main/modules/capstone/project/purple_loop.py"><code>project/purple_loop.py</code></a> — build the cloud
+  purple-team loop (worked answer: <a href="https://github.com/patrickdaj/ai-security/blob/main/modules/capstone/reference/purple_loop.py"><code>reference/purple_loop.py</code></a>):
   the model plans relevant Stratus Red Team techniques,
   detonation runs them (behind a hard authorization gate), the model judges
   whether your telemetry caught each one, and for gaps it synthesizes the
@@ -1558,6 +1580,15 @@ human gate.</p>
 <p>You now have a portfolio: eleven AI-augmented security tools and a copilot that
 orchestrates them. The throughline — <em>tools find candidates, AI scales the
 judgment, humans gate the irreversible</em> — is the thing to carry into real work.</p>
+<h2 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">&para;</a></h2>
+<p>Curated entry points to learn the tools and concepts for this module — official docs and authoritative references. They get you grounded; the build is still yours.</p>
+<ul>
+<li><a href="https://www.anthropic.com/engineering/building-effective-agents">Anthropic: Building effective agents</a></li>
+<li><a href="https://platform.claude.com/docs">Anthropic API: tool use</a></li>
+<li><a href="https://stratus-red-team.cloud/">Stratus Red Team</a></li>
+<li><a href="https://github.com/redcanaryco/atomic-red-team">Atomic Red Team</a></li>
+<li><a href="https://attack.mitre.org/">MITRE ATT&amp;CK</a></li>
+</ul>
 
 
 
