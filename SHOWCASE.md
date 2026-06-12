@@ -26,7 +26,10 @@ or a security review board.
 
 ## Automation (the deliverables, generated unattended)
 
-These artifacts aren't just hand-run — the same pipeline produces them headless:
+These artifacts aren't just hand-run — the same pipeline produces them headless.
+You build this pipeline yourself in
+[module 16](./modules/16-automation-pipelines); the code below is the reference
+solution it extends:
 
 - [`automation/`](./automation) — `python -m automation` / `aug-pipeline`: scan
   → triage → `report.md` + `report.json`, severity-gated exit code.

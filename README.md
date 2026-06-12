@@ -60,6 +60,7 @@ which is exactly where AI augmentation pays off most.
 | 13 | [Container & K8s Runtime](./modules/13-container-k8s-runtime) | Trivy, Falco, Tetragon, Kyverno | Runtime-alert triage + admission-policy generator |
 | 14 | [Host Hardening & Compliance](./modules/14-host-hardening-compliance) | OpenSCAP, Lynis, InSpec, osquery | Remediation-as-code + compliance control mapper |
 | 15 | [Zero Trust (ZTNA)](./modules/15-zero-trust-ztna) | Pomerium, OpenZiti, Teleport, SPIFFE/SPIRE, OPA, Istio | Least-privilege & microsegmentation policy synthesizer |
+| 16 | [Automation & Pipelines](./modules/16-automation-pipelines) | GitHub Actions, Terraform, CodeBuild/EventBridge | Build the headless scan→triage→report pipeline + CI gate + scheduled IaC |
 
 | # | Module | Tools you tour | What you build with AI |
 |---|--------|----------------|------------------------|
@@ -141,6 +142,9 @@ isolated Docker network).
 ## Automation
 
 The whole toolchain is meant to run unattended — Python and Terraform.
+**You build this in [module 16](./modules/16-automation-pipelines);** the code
+below is the *reference solution* you study and extend, and it keeps the repo's
+own CI live.
 
 - **Headless pipeline** ([`automation/`](./automation)) — `python -m automation`
   (or the `aug-pipeline` console script) runs a configurable set of scanners
