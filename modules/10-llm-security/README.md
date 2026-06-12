@@ -26,6 +26,11 @@ promptfoo redteam run            # after `promptfoo redteam init`
 Run garak against a small LLM app you stand up (a RAG bot, or a tool-using
 agent). Watch which probes land. Those are your real vulnerabilities.
 
+> Tip: a **local Ollama model** (the same backend the rest of this repo can run
+> on — see the root README's *Backends* section) is a free, safe, offline target
+> to point garak/promptfoo at. Red-teaming the local model you might deploy for
+> on-prem augmentation is a directly useful exercise.
+
 ## AI augmentation: prompt-injection red-team + guardrail harness
 
 This module's "augmentation" is dual-use and deliberate: you use AI both as the

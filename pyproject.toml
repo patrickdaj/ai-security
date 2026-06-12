@@ -15,6 +15,10 @@ dev = [
     "pytest>=8.0",
     "ruff>=0.5",
 ]
+# Local-model backend (Ollama). Optional so the Claude-only path stays clean.
+local = [
+    "ollama>=0.5",
+]
 
 [tool.setuptools.packages.find]
 include = ["aug*"]

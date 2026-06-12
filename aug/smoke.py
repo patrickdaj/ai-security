@@ -32,7 +32,7 @@ EXAMPLE = Finding(
 
 def main() -> None:
     client = AugClient()
-    rprint(f"[bold]Model:[/bold] {client.model}")
+    rprint(f"[bold]Backend:[/bold] {client.backend}   [bold]Model:[/bold] {client.model}")
     rprint("[bold]Triaging example finding...[/bold]\n")
     t = triage_finding(client, EXAMPLE)
     rprint(t.model_dump())

@@ -83,6 +83,35 @@ Every AI augmentation in this repo follows the same shape, implemented once in
 This mirrors real AppSec automation: the LLM is a judgment layer bolted onto
 deterministic tooling, not a replacement for it.
 
+## Backends: Claude or local (Ollama)
+
+The augmentation layer is provider-agnostic behind one `AugClient`. Pick a
+backend with `AUG_BACKEND`:
+
+- **`anthropic` (default)** — Claude via the Anthropic SDK. What the modules are
+  tuned for: adaptive thinking plus structured outputs give the sharpest
+  judgments and the most reliable typed results. Start here.
+- **`ollama`** — a model running locally via [Ollama](https://ollama.com). Opt
+  in when **data residency** matters (you'd rather not send proprietary code,
+  secret context, or a cloud IAM graph to an external API), when you're offline,
+  or to cut cost. Local models are weaker at the structured security reasoning
+  these augmentations lean on, so treat it as the privacy/cost lever, not the
+  quality default.
+
+```bash
+# Claude (default)
+export AUG_BACKEND=anthropic   # + ANTHROPIC_API_KEY
+
+# Local model
+pip install -e ".[local]"      # adds the ollama client
+ollama pull llama3.1           # or qwen2.5 / mistral-nemo
+export AUG_BACKEND=ollama AUG_OLLAMA_MODEL=llama3.1
+```
+
+Both honor the same schemas and the same grounding system prompt, so every
+module works unchanged on either — and comparing Claude vs. a local model on the
+same finding is itself a worthwhile exercise (see module 00).
+
 ## Getting started
 
 ```bash
@@ -91,9 +120,9 @@ $EDITOR modules/00-foundations/README.md
 
 # 2. Create a Python env and install the augmentation library.
 python -m venv .venv && source .venv/bin/activate
-pip install -e ".[dev]"
+pip install -e ".[dev]"          # add ".[dev,local]" to include the Ollama backend
 
-# 3. Configure your Claude API key.
+# 3. Configure your backend + key (Claude by default, or local Ollama).
 cp .env.example .env   # then edit .env
 
 # 4. Smoke-test the AI layer.

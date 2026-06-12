@@ -69,6 +69,18 @@ make smoke                 # python -m aug.smoke
 Success looks like: the SQL-injection example comes back as a high-severity
 `true_positive` with a parameterized-query fix and calibrated confidence.
 
+### Choosing a backend
+
+`AugClient` runs on Claude (default) or a local Ollama model — same schemas,
+same code. Claude is what the modules are tuned for; reach for Ollama when data
+residency, offline work, or cost matters (see the root README's *Backends*
+section). To try local:
+
+```bash
+pip install -e ".[local]" && ollama pull llama3.1
+AUG_BACKEND=ollama python -m aug.smoke
+```
+
 ## Exercises
 
 1. Add a `Finding.from_dict` classmethod and a tiny adapter that loads a hand-
@@ -77,6 +89,10 @@ Success looks like: the SQL-injection example comes back as a high-severity
    a hardcoded constant) and confirm the verdict flips and confidence drops.
 3. Swap `AUG_MODEL` to `claude-sonnet-4-6` and compare triage quality vs. cost
    on a batch of 10 findings.
+4. Run the same batch under `AUG_BACKEND=ollama` with a local model and compare
+   against Claude — where does the local model's reasoning hold up, and where
+   does it miss reachability nuance or fail schema validation? This calibrates
+   when the privacy/cost tradeoff is worth it.
 
 ## Done when
 
