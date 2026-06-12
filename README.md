@@ -69,6 +69,10 @@ which is exactly where AI augmentation pays off most.
 Work the modules in order — later modules assume the `aug` patterns from
 earlier ones — or jump straight to whatever tool you need today.
 
+Every module has the same shape — a **`project/`** stub you build, a
+**`reference/`** worked solution to study, and an **`example-output/`** target.
+See [`modules/CONVENTIONS.md`](./modules/CONVENTIONS.md).
+
 **Want to see what it produces first?** [`SHOWCASE.md`](./SHOWCASE.md) indexes a
 concrete example deliverable for each module (triage reports, generated rules,
 attack-path narratives, the cross-correlated capstone report) — the portfolio

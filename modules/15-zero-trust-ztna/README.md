@@ -57,9 +57,9 @@ Two builds:
 > legitimate-but-rare flows. Ship it in *audit/dry-run* mode first, have the
 > model explain each rule, and require human sign-off before enforcement.
 
-A working reference for build #2 lives in
-[`project/microseg.py`](./project/microseg.py): it deterministically aggregates
-observed flows into per-destination allow candidates, then has the model flag
+Build #2 in [`project/microseg.py`](./project/microseg.py) (a stub); the worked
+answer is [`reference/microseg.py`](./reference/microseg.py). It deterministically
+aggregates observed flows into per-destination allow candidates, then has the model flag
 anomalies (a workload hitting the cloud metadata endpoint; analytics touching
 the prod DB) and emit dry-run Istio `AuthorizationPolicy` YAML for the
 legitimate set. Try it:

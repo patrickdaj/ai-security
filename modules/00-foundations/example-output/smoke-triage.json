@@ -1,0 +1,9 @@
+{
+  "_comment": "Example output of `python -m aug.smoke` — the typed Triage the model returns for the planted SQL-injection finding. Illustrative reference.",
+  "verdict": "true_positive",
+  "adjusted_severity": "high",
+  "confidence": 0.94,
+  "rationale": "User-controlled `username` is concatenated into the SQL string via %-formatting and reaches cur.execute() unsanitized. Reachable from any caller of get_user().",
+  "exploitability": "Classic auth-bypass / UNION exfiltration via ' OR '1'='1 style input.",
+  "suggested_fix": "Use a parameterized query: cur.execute(\"SELECT * FROM users WHERE name = %s\", (username,))"
+}

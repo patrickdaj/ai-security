@@ -71,8 +71,9 @@ human gate.
   (`security-scan.yml`) and can run on a schedule in AWS via
   [`terraform/automation/`](../../terraform/automation). Extend it with the
   cross-tool correlation described above.
-- [`project/purple_loop.py`](./project/purple_loop.py) — a working cloud
-  purple-team loop: the model plans relevant Stratus Red Team techniques,
+- [`project/purple_loop.py`](./project/purple_loop.py) — build the cloud
+  purple-team loop (worked answer: [`reference/purple_loop.py`](./reference/purple_loop.py)):
+  the model plans relevant Stratus Red Team techniques,
   detonation runs them (behind a hard authorization gate), the model judges
   whether your telemetry caught each one, and for gaps it synthesizes the
   missing Sigma rule. Runs safely in dry-run over a recorded events file:
