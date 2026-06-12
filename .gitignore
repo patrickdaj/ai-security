@@ -1,0 +1,27 @@
+# Secrets / config
+.env
+*.key
+*.pem
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+build/
+dist/
+
+# Tool output / scratch (don't commit scan dumps, crashes, sboms)
+scratch/
+*.sarif
+*.sbom.json
+crashes/
+findings/*.raw.json
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/

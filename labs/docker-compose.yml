@@ -1,0 +1,24 @@
+# Isolated lab network of intentionally-vulnerable targets.
+# Bound to localhost only. Do NOT add `ports` that expose these beyond 127.0.0.1.
+services:
+  dvwa:
+    image: vulnerables/web-dvwa
+    ports:
+      - "127.0.0.1:8081:80"
+    networks: [lab]
+
+  juice-shop:
+    image: bkimminich/juice-shop
+    ports:
+      - "127.0.0.1:3000:3000"
+    networks: [lab]
+
+  # vuln-app:
+  #   build: ./vuln-app          # drop your own planted-bug app here
+  #   ports:
+  #     - "127.0.0.1:8000:8000"
+  #   networks: [lab]
+
+networks:
+  lab:
+    driver: bridge
