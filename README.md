@@ -138,6 +138,37 @@ See [`modules/00-foundations`](./modules/00-foundations) for the full setup,
 including the intentionally-vulnerable lab targets (run them **only** in an
 isolated Docker network).
 
+## Automation
+
+The whole toolchain is meant to run unattended — Python and Terraform.
+
+- **Headless pipeline** ([`automation/`](./automation)) — `python -m automation`
+  (or the `aug-pipeline` console script) runs a configurable set of scanners
+  (Semgrep, Gitleaks, Trivy), normalizes to `aug.Finding`, triages with the
+  model, writes `report.md` + `report.json`, and **exits non-zero past a severity
+  threshold** so it gates CI. It degrades gracefully: missing scanners are
+  skipped, and `--no-triage` runs without a model/key.
+
+  ```bash
+  make pipeline          # scan + AI triage against .
+  make scan              # aggregation only (no key needed)
+  aug-pipeline --config automation.yaml --fail-on high
+  ```
+
+- **CI** ([`.github/workflows/`](./.github/workflows)) — `ci.yml` lints, tests,
+  and validates the Terraform; `security-scan.yml` runs the pipeline on a
+  schedule and on PRs (triaging with Claude when `ANTHROPIC_API_KEY` is set,
+  aggregating otherwise) and uploads the report as an artifact. The curriculum
+  scans itself.
+
+- **Terraform**
+  - [`terraform/automation/`](./terraform/automation) — provisions the pipeline
+    as a scheduled AWS job (EventBridge → CodeBuild → encrypted S3 reports,
+    least-privilege IAM). Production-style, hardened.
+  - [`modules/08-cloud-iac/project/terraform/`](./modules/08-cloud-iac/project/terraform)
+    — a deliberately *misconfigured* module that serves as the scan target for
+    modules 08 and 11. Scan it; do not apply it.
+
 ## A note on scope and ethics
 
 Everything here is for **authorized** security work: your own lab, CTFs,

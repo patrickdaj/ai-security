@@ -24,6 +24,19 @@ or a security review board.
 | 15 ZTNA | [microseg-policies.yaml](./modules/15-zero-trust-ztna/example-output/microseg-policies.yaml) · [anomalies.md](./modules/15-zero-trust-ztna/example-output/anomalies.md) | observed traffic → default-deny Istio policies + flagged anomalies |
 | ★ Capstone | [security-report.md](./modules/capstone/example-output/security-report.md) · [purple-team-report.md](./modules/capstone/example-output/purple-team-report.md) | 600+ findings → 3 cross-correlated risks; purple-team gap closure |
 
+## Automation (the deliverables, generated unattended)
+
+These artifacts aren't just hand-run — the same pipeline produces them headless:
+
+- [`automation/`](./automation) — `python -m automation` / `aug-pipeline`: scan
+  → triage → `report.md` + `report.json`, severity-gated exit code.
+- [`.github/workflows/security-scan.yml`](./.github/workflows/security-scan.yml)
+  — runs it on a schedule and uploads the report; the repo scans itself.
+- [`terraform/automation/`](./terraform/automation) — the pipeline as a scheduled
+  AWS job (EventBridge → CodeBuild → encrypted S3). Infra-as-code, hardened.
+- [`modules/08-cloud-iac/project/terraform/`](./modules/08-cloud-iac/project/terraform)
+  — a misconfigured module to scan (the target, not the automation).
+
 ## The throughline these show
 
 Across every artifact: the deterministic tool produced *candidates*; the AI

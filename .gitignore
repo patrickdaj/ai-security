@@ -21,6 +21,21 @@ scratch/
 crashes/
 findings/*.raw.json
 
+# Terraform (keep .terraform.lock.hcl committed)
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+*.tfvars
+!*.tfvars.example
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+
+# Pipeline output
+report/
+automation.yaml
+
 # OS / editor
 .DS_Store
 .idea/

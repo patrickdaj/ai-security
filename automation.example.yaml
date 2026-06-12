@@ -1,0 +1,16 @@
+# Config for the headless pipeline (python -m automation --config automation.yaml).
+# Every key is optional; CLI flags override these.
+
+target: .                       # path or repo to scan
+scanners:                       # any subset of the registered adapters
+  - semgrep
+  - gitleaks
+  - trivy
+
+out: scratch/pipeline           # where report.md / report.json are written
+
+triage: true                    # run AI triage (false = aggregate only, no model)
+fast: false                     # use the cheap/fast model for triage
+min_confidence: 0.0             # drop triaged findings below this confidence
+
+fail_on: high                   # exit 1 if a kept finding is >= this severity (gates CI)

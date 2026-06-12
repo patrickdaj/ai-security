@@ -7,8 +7,12 @@ dependencies = [
     "anthropic>=0.40",
     "pydantic>=2.6",
     "python-dotenv>=1.0",
+    "pyyaml>=6.0",
     "rich>=13.7",
 ]
+
+[project.scripts]
+aug-pipeline = "automation.pipeline:main"
 
 [project.optional-dependencies]
 dev = [
@@ -21,11 +25,12 @@ local = [
 ]
 
 [tool.setuptools.packages.find]
-include = ["aug*"]
+include = ["aug*", "automation*"]
 
 [tool.ruff]
 line-length = 100
 target-version = "py310"
+extend-exclude = ["modules/*/project"]
 
 [build-system]
 requires = ["setuptools>=68"]

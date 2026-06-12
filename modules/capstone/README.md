@@ -65,6 +65,12 @@ human gate.
 
 ## Project starters
 
+- [`automation/`](../../automation) (repo root) — the **headless version of this
+  capstone**: `python -m automation` runs the scan → normalize → triage → report
+  workflow unattended, with a severity-gated exit code. It's wired into CI
+  (`security-scan.yml`) and can run on a schedule in AWS via
+  [`terraform/automation/`](../../terraform/automation). Extend it with the
+  cross-tool correlation described above.
 - [`project/purple_loop.py`](./project/purple_loop.py) — a working cloud
   purple-team loop: the model plans relevant Stratus Red Team techniques,
   detonation runs them (behind a hard authorization gate), the model judges
