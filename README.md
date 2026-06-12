@@ -68,6 +68,11 @@ which is exactly where AI augmentation pays off most.
 Work the modules in order — later modules assume the `aug` patterns from
 earlier ones — or jump straight to whatever tool you need today.
 
+**Want to see what it produces first?** [`SHOWCASE.md`](./SHOWCASE.md) indexes a
+concrete example deliverable for each module (triage reports, generated rules,
+attack-path narratives, the cross-correlated capstone report) — the portfolio
+artifacts this curriculum is built to generate.
+
 ## The augmentation pattern
 
 Every AI augmentation in this repo follows the same shape, implemented once in

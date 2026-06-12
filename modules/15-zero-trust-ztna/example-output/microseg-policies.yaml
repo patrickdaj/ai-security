@@ -1,0 +1,78 @@
+# Example output — illustrative deliverable of module 15 (microseg.py) run
+# against project/sample_flows.json. Default-deny + allow-only-observed-and-
+# legitimate. All policies ship in dry-run; flagged anomalies (see anomalies.md)
+# are deliberately NOT allow-listed. Apply in dry-run, watch audit logs, then
+# enforce after human sign-off.
+---
+apiVersion: security.istio.io/v1
+kind: AuthorizationPolicy
+metadata:
+  name: default-deny
+  namespace: prod
+  annotations:
+    istio.io/dry-run: "true"
+spec: {}   # empty spec = deny all in this namespace
+---
+apiVersion: security.istio.io/v1
+kind: AuthorizationPolicy
+metadata:
+  name: allow-to-catalog
+  namespace: prod
+  annotations:
+    istio.io/dry-run: "true"
+spec:
+  selector:
+    matchLabels: {app: catalog}
+  action: ALLOW
+  rules:
+    - from:
+        - source:
+            principals: ["cluster.local/ns/prod/sa/frontend"]
+      to:
+        - operation:
+            ports: ["8080"]
+            methods: ["GET"]
+            paths: ["/items"]
+---
+apiVersion: security.istio.io/v1
+kind: AuthorizationPolicy
+metadata:
+  name: allow-to-payments
+  namespace: prod
+  annotations:
+    istio.io/dry-run: "true"
+spec:
+  selector:
+    matchLabels: {app: payments}
+  action: ALLOW
+  rules:
+    - from:
+        - source:
+            principals: ["cluster.local/ns/prod/sa/frontend"]
+      to:
+        - operation:
+            ports: ["8080"]
+            methods: ["POST"]
+            paths: ["/charge"]
+---
+apiVersion: security.istio.io/v1
+kind: AuthorizationPolicy
+metadata:
+  name: allow-to-postgres
+  namespace: prod
+  annotations:
+    istio.io/dry-run: "true"
+spec:
+  selector:
+    matchLabels: {app: postgres}
+  action: ALLOW
+  rules:
+    # NOTE: 'analytics' is intentionally excluded — see anomalies.md
+    - from:
+        - source:
+            principals:
+              - "cluster.local/ns/prod/sa/payments"
+              - "cluster.local/ns/prod/sa/catalog"
+      to:
+        - operation:
+            ports: ["5432"]

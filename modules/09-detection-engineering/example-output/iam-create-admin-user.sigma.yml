@@ -1,0 +1,31 @@
+# Example output — illustrative deliverable of module 09 (threat-intel → Sigma
+# synthesizer). Validate with `sigma check` and convert to your backend before
+# deploying. This rule also corresponds to the capstone purple-team gap.
+title: AWS IAM User Granted AdministratorAccess Shortly After Creation
+id: 7c1f2e8a-9b3d-4c5e-8a21-0f9e2b6d4a11
+status: experimental
+description: >
+  Detects an IAM user being created and then attached the AdministratorAccess
+  managed policy within a short window — a common cloud persistence /
+  privilege-escalation pattern (Stratus aws.persistence.iam-create-admin-user,
+  ATT&CK T1136.003 / T1098).
+references:
+  - https://stratus-red-team.cloud/attack-techniques/AWS/aws.persistence.iam-create-admin-user/
+author: aug-generated
+tags:
+  - attack.persistence
+  - attack.t1136.003
+  - attack.privilege_escalation
+  - attack.t1098
+logsource:
+  product: aws
+  service: cloudtrail
+detection:
+  attach_admin:
+    eventSource: iam.amazonaws.com
+    eventName: AttachUserPolicy
+    requestParameters.policyArn|endswith: ':policy/AdministratorAccess'
+  condition: attach_admin
+falsepositives:
+  - Legitimate break-glass admin provisioning (correlate with change tickets).
+level: high

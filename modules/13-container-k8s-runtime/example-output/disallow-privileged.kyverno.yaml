@@ -1,0 +1,43 @@
+# Example output — illustrative deliverable of module 13 (admission-policy
+# generator). Intent: "no containers may run privileged or mount the host
+# docker socket." Validate with `kyverno apply` against allow/deny fixtures
+# before enforcing.
+apiVersion: kyverno.io/v1
+kind: ClusterPolicy
+metadata:
+  name: disallow-privileged-and-docker-sock
+  annotations:
+    policies.kyverno.io/category: Pod Security
+    policies.kyverno.io/severity: high
+spec:
+  validationFailureAction: Audit   # ship in Audit, flip to Enforce after review
+  background: true
+  rules:
+    - name: no-privileged
+      match:
+        any:
+          - resources:
+              kinds: [Pod]
+      validate:
+        message: "Privileged containers are not allowed."
+        pattern:
+          spec:
+            =(securityContext):
+              =(privileged): "false"
+            containers:
+              - =(securityContext):
+                  =(privileged): "false"
+
+    - name: no-docker-socket
+      match:
+        any:
+          - resources:
+              kinds: [Pod]
+      validate:
+        message: "Mounting the host docker socket is not allowed."
+        deny:
+          conditions:
+            any:
+              - key: "{{ request.object.spec.volumes[].hostPath.path || '' }}"
+                operator: AnyIn
+                value: ["/var/run/docker.sock"]

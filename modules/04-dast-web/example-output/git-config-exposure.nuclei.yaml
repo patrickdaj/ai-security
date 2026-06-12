@@ -1,0 +1,39 @@
+# Example output — illustrative deliverable of module 04 (advisory → Nuclei
+# template generator). Generated-style template; validate with `nuclei -validate`
+# and test against an authorized target before trusting it.
+id: exposed-git-config
+
+info:
+  name: Exposed .git/config
+  author: aug-generated
+  severity: medium
+  description: |
+    Detects a publicly accessible .git/config, which leaks repository metadata
+    (remote URLs, branch names) and often indicates the full .git directory is
+    exposed — enabling source-code reconstruction.
+  reference:
+    - https://owasp.org/www-community/attacks/Source_Code_Disclosure
+  tags: exposure,git,misconfig
+
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/.git/config"
+
+    matchers-condition: and
+    matchers:
+      - type: word
+        part: body
+        words:
+          - "[core]"
+          - "[remote"
+        condition: and
+
+      - type: word
+        part: header
+        words:
+          - "text/plain"
+
+      - type: status
+        status:
+          - 200
