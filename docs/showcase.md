@@ -1,0 +1,3 @@
+{%
+   include-markdown "../SHOWCASE.md"
+%}

@@ -1,4 +1,4 @@
-.PHONY: help setup smoke lint test pipeline scan tf-fmt tf-validate lab-up lab-down
+.PHONY: help setup smoke lint test pipeline scan tf-fmt tf-validate docs docs-serve lab-up lab-down
 
 help:
 	@echo "Targets:"
@@ -10,6 +10,8 @@ help:
 	@echo "  scan         Run the pipeline with aggregation only (no model/key)"
 	@echo "  tf-fmt       terraform fmt -check -recursive"
 	@echo "  tf-validate  Validate the Terraform modules"
+	@echo "  docs         Build the MkDocs site (strict)"
+	@echo "  docs-serve   Serve the docs locally at :8000"
 	@echo "  lab-up       Start the intentionally-vulnerable lab targets (isolated)"
 	@echo "  lab-down     Tear the lab down"
 
@@ -30,6 +32,12 @@ pipeline:
 
 scan:
 	python -m automation --target . --out scratch/pipeline --no-triage -v
+
+docs:
+	mkdocs build
+
+docs-serve:
+	mkdocs serve
 
 tf-fmt:
 	terraform fmt -check -recursive

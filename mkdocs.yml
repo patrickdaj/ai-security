@@ -1,0 +1,76 @@
+site_name: AI Security Engineering Curriculum
+site_description: >-
+  A hardcore, project-driven curriculum that tours the open-source security
+  toolchain and augments each tool with AI (Claude or a local model).
+repo_url: https://github.com/patrickdaj/ai-security
+repo_name: patrickdaj/ai-security
+edit_uri: ""
+
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.top
+    - navigation.tracking
+    - content.code.copy
+    - search.suggest
+    - toc.follow
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+plugins:
+  - search
+  - include-markdown
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+
+nav:
+  - Home: index.md
+  - Conventions: conventions.md
+  - Showcase: showcase.md
+  - The Lab: labs.md
+  - Automation: automation.md
+  - Foundations:
+      - 00 — Foundations & Lab: modules/00-foundations.md
+  - Code & Supply Chain:
+      - 01 — SAST: modules/01-sast.md
+      - 02 — Secrets: modules/02-secrets.md
+      - 03 — Supply Chain: modules/03-supply-chain.md
+  - App & Network:
+      - 04 — DAST & Web: modules/04-dast-web.md
+      - 05 — Recon & Network: modules/05-recon-network.md
+  - Offensive & Binary:
+      - 06 — Fuzzing: modules/06-fuzzing.md
+      - 07 — Reverse Engineering: modules/07-reverse-engineering.md
+  - Detection, Cloud & Response:
+      - 08 — Cloud & IaC: modules/08-cloud-iac.md
+      - 09 — Detection Engineering: modules/09-detection-engineering.md
+      - 10 — LLM/ML Security: modules/10-llm-security.md
+  - Infrastructure & Runtime:
+      - 11 — Cloud Identity & Attack Paths: modules/11-cloud-identity-attack-paths.md
+      - 12 — CI/CD & Artifact Integrity: modules/12-cicd-supply-chain.md
+      - 13 — Container & K8s Runtime: modules/13-container-k8s-runtime.md
+      - 14 — Host Hardening & Compliance: modules/14-host-hardening-compliance.md
+      - 15 — Zero Trust (ZTNA): modules/15-zero-trust-ztna.md
+      - 16 — Automation & Pipelines: modules/16-automation-pipelines.md
+  - Capstone: modules/capstone.md

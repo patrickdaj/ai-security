@@ -23,6 +23,11 @@ dev = [
 local = [
     "ollama>=0.5",
 ]
+# Documentation site (MkDocs Material).
+docs = [
+    "mkdocs-material>=9.5",
+    "mkdocs-include-markdown-plugin>=6.2",
+]
 
 [tool.setuptools.packages.find]
 include = ["aug*", "automation*"]

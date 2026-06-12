@@ -36,6 +36,9 @@ override.tf.json
 report/
 automation.yaml
 
+# MkDocs build output
+site/
+
 # OS / editor
 .DS_Store
 .idea/
