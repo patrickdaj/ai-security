@@ -1,0 +1,55 @@
+name: links
+
+# Validate Markdown links. Two modes:
+#   - PRs / pushes: OFFLINE check — every relative/file link must resolve.
+#     Deterministic, no network, so it can safely gate merges.
+#   - Weekly + on-demand: FULL check including external URLs (the Resources
+#     links, tool docs, etc.). Kept off the PR path so a flaky external host
+#     never blocks a merge.
+on:
+  pull_request:
+    paths:
+      - "**/*.md"
+      - "lychee.toml"
+      - ".github/workflows/links.yml"
+  push:
+    branches: [main]
+    paths:
+      - "**/*.md"
+  schedule:
+    - cron: "0 7 * * 1" # Mondays 07:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  internal:
+    name: internal links (offline)
+    if: github.event_name == 'pull_request' || github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check relative/file links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --offline --no-progress "./**/*.md"
+          fail: true
+
+  external:
+    name: external links (full)
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Restore lychee cache
+        uses: actions/cache@v4
+        with:
+          path: .lycheecache
+          key: lychee-${{ github.run_id }}
+          restore-keys: lychee-
+      - name: Check all links (internal + external)
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --cache --max-cache-age 1d --no-progress "./**/*.md"
+          fail: true

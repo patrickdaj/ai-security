@@ -1,0 +1,20 @@
+# lychee link-checker config (used by .github/workflows/links.yml).
+max_retries = 3
+retry_wait_time = 2
+timeout = 20
+
+# Some official docs sites rate-limit or block bots; treat these as reachable
+# rather than failing on a 429.
+accept = [200, 206, 429]
+
+# Don't check lab/example/placeholder targets that intentionally don't resolve.
+exclude_loopback = true   # 127.0.0.1, localhost, ::1
+exclude_private = true    # RFC1918 (10/172.16/192.168) + link-local 169.254
+exclude = [
+  "example\\.(com|org|net)",
+  "\\.internal",
+  "\\.local",
+  "^spiffe://",
+  "^https?://target",
+  "https://codespaces\\.new/",   # badge deep-link with query params, not a doc
+]
