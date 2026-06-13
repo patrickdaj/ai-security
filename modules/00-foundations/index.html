@@ -10,6 +10,8 @@
       
       
       
+        <link rel="canonical" href="https://patrickdaj.github.io/ai-security/modules/00-foundations/">
+      
       
         <link rel="prev" href="../../automation/">
       
@@ -1604,6 +1606,10 @@
 
 
 <h1 id="module-00-foundations-lab">Module 00 — Foundations &amp; Lab<a class="headerlink" href="#module-00-foundations-lab" title="Permanent link">&para;</a></h1>
+<p><a href="https://codespaces.new/patrickdaj/ai-security?quickstart=1"><img alt="Open in GitHub Codespaces" src="https://github.com/codespaces/badge.svg" /></a></p>
+<blockquote>
+<p>Opens a ready-to-build cloud environment (Python + scanners pre-installed). Build in <code>project/</code>; the worked answer is in <code>reference/</code>.</p>
+</blockquote>
 <p>Before touring tools, you set up two things: a <strong>safe lab</strong> to attack, and the
 <strong><code>aug</code> augmentation library</strong> that every later module wires into. You also
 ground yourself in the mental model that makes the rest of the curriculum
@@ -1646,7 +1652,7 @@ lets you trust an LLM in an automated security pipeline.</p>
 <h2 id="lab">Lab<a class="headerlink" href="#lab" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>make<span class="w"> </span>lab-up<span class="w">      </span><span class="c1"># DVWA, Juice Shop, (your vuln-app) on an isolated network</span>
 </code></pre></div>
-<p>See <a href="https://github.com/patrickdaj/ai-security/blob/main/labs/README.md"><code>labs/README.md</code></a>. <strong>Localhost only. Authorized
+<p>See <a href="../../labs/"><code>labs/README.md</code></a>. <strong>Localhost only. Authorized
 targets only.</strong></p>
 <h2 id="project-get-the-ai-layer-running">Project: get the AI layer running<a class="headerlink" href="#project-get-the-ai-layer-running" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>.venv<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">source</span><span class="w"> </span>.venv/bin/activate
