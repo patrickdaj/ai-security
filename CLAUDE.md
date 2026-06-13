@@ -66,8 +66,8 @@ are thin `{% include-markdown %}` stubs. `mkdocs_hooks.py` rewrites repo links
 duplicate content into `docs/`.**
 
 **Links must resolve.** Relative links are validated **offline in CI** — every
-`[text](path)` must point to a real file. External URLs are checked weekly. Keep
-them valid.
+relative Markdown link must resolve to a real file. External URLs are checked
+weekly. Keep them valid.
 
 **Style.** Python: `ruff`, line length 100 (`modules/*/project` is excluded, so
 stubs may carry unused "hint" imports). Terraform: keep `terraform fmt` clean.
