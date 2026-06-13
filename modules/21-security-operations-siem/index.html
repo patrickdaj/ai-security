@@ -1600,6 +1600,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#soar-with-n8n-ai-routed-playbook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SOAR with n8n (AI-routed playbook)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#resources" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1971,6 +1982,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#soar-with-n8n-ai-routed-playbook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SOAR with n8n (AI-routed playbook)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#resources" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2013,7 +2035,7 @@ adding a judgment layer to alert triage so analysts stop drowning.</p>
   languages (SPL / EQL / KQL). Pick one to go deep; the concepts transfer.</li>
 <li><strong>Sysmon</strong> — rich Windows endpoint telemetry (the detection-engineer's lifeblood).</li>
 <li><strong>OCSF / ECS</strong> — the schemas you normalize disparate logs into.</li>
-<li><strong>Shuffle / Tines</strong> — open-source SOAR for response playbooks.</li>
+<li><strong>Shuffle / Tines / n8n</strong> — open-source SOAR for response playbooks.</li>
 </ul>
 <h3 id="tour-tasks">Tour tasks<a class="headerlink" href="#tour-tasks" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Stand up Elastic + Kibana (or Splunk free) and ship Sysmon + auth logs in.</span>
@@ -2048,6 +2070,22 @@ move as SAST triage, applied to operations.</p>
 <li>You can turn intent into a validated SIEM detection on a real backend, and run
   a labeled alert queue through a triage copilot that measurably cuts the noise.</li>
 </ul>
+<h2 id="soar-with-n8n-ai-routed-playbook">SOAR with n8n (AI-routed playbook)<a class="headerlink" href="#soar-with-n8n-ai-routed-playbook" title="Permanent link">&para;</a></h2>
+<p>The triage copilot decides; a SOAR tool acts. Build the low-code version:</p>
+<ol>
+<li><strong>Triage service</strong> — <a href="https://github.com/patrickdaj/ai-security/blob/main/modules/21-security-operations-siem/project/triage_service.py"><code>project/triage_service.py</code></a>
+   (worked answer: <a href="https://github.com/patrickdaj/ai-security/blob/main/modules/21-security-operations-siem/reference/triage_service.py"><code>reference/triage_service.py</code></a>)
+   is a tiny webhook that wraps the shared <code>aug</code> triage engine: POST an alert,
+   get back a typed verdict. Any SOAR can call it.</li>
+<li><strong>n8n workflow</strong> — import <a href="https://github.com/patrickdaj/ai-security/blob/main/modules/21-security-operations-siem/reference/n8n/soar-triage.workflow.json"><code>reference/n8n/soar-triage.workflow.json</code></a>:
+   an alert hits a webhook → the workflow calls the triage service → a Switch
+   routes on <code>verdict</code> (true positive → notify + ticket; false positive →
+   suppress; needs review → analyst queue). See
+   <a href="https://github.com/patrickdaj/ai-security/blob/main/modules/21-security-operations-siem/example-output/soar-run.md"><code>example-output/soar-run.md</code></a>.</li>
+</ol>
+<p>Same "AI is the judgment layer, humans gate the irreversible" pattern as the
+Python pipeline (module 16) — but visual and analyst-readable. n8n's native LLM
+nodes can also do the triage inline if you'd rather not run the service.</p>
 <h2 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">&para;</a></h2>
 <p>Curated entry points to learn the tools and concepts for this module — official docs and authoritative references. They get you grounded; the build is still yours.</p>
 <ul>
@@ -2056,6 +2094,7 @@ move as SAST triage, applied to operations.</p>
 <li><a href="https://learn.microsoft.com/en-us/azure/sentinel/">Microsoft Sentinel + KQL</a></li>
 <li><a href="https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon">Sysmon (Sysinternals)</a></li>
 <li><a href="https://schema.ocsf.io/">OCSF schema</a> · <a href="https://www.elastic.co/guide/en/ecs/current/index.html">Elastic Common Schema (ECS)</a></li>
+<li><a href="https://docs.n8n.io/">n8n docs</a> · <a href="https://docs.n8n.io/advanced-ai/">n8n AI / LangChain nodes</a> · <a href="https://shuffler.io/">Shuffle SOAR</a></li>
 </ul>
 
 
