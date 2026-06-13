@@ -63,6 +63,15 @@ collapse to one.
   turn a folder of crashes into a deduplicated, root-caused, exploitability-rated
   list.
 
+## Advanced track: exploit development
+
+Find-and-triage is half the job; weaponization is the other half. Build
+[`project/exploit_dev.py`](./project/exploit_dev.py) (worked answer:
+[`reference/exploit_dev.py`](./reference/exploit_dev.py)) to reason from a crash +
+the binary's mitigations to an exploitation *strategy* — see
+[`example-output/exploit-writeup.md`](./example-output/exploit-writeup.md).
+Topics: ROP, heap grooming, ASLR/DEP/CFI bypass. Authorized/CTF targets only.
+
 ## Resources
 
 Curated entry points to learn the tools and concepts for this module — official docs and authoritative references. They get you grounded; the build is still yours.

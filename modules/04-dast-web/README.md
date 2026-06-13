@@ -61,6 +61,15 @@ render them, so you can validate before writing.
   on a vulnerable target and validates clean — and you can de-noise a raw web
   scan down to the exploitable few.
 
+## Advanced track: manual web & API exploitation
+
+Scanners find single issues; real assessment is *chaining* them and reasoning
+about auth/session flows. Build [`project/web_chain.py`](./project/web_chain.py)
+(worked answer: [`reference/web_chain.py`](./reference/web_chain.py)) to construct
+multi-step exploit chains from individual findings — see
+[`example-output/web-chain.md`](./example-output/web-chain.md). Lean on Burp Suite
+methodology, the OWASP WSTG, and API-specific testing.
+
 ## Resources
 
 Curated entry points to learn the tools and concepts for this module — official docs and authoritative references. They get you grounded; the build is still yours.

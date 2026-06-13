@@ -94,17 +94,45 @@ human gate.
   require explicit, multi-signal authorization. That gate is the point: the AI
   plans and writes detections; a human authorizes the irreversible step.
 
+## Capstone v2 — the full-lifecycle copilot
+
+Once you've worked the generalist modules (17–25, see [`ROADMAP.md`](../../ROADMAP.md)),
+extend the copilot so it spans the **entire security lifecycle**, not just
+find-and-fix. Each phase plugs in the module you built:
+
+```
+architect → build → ship → detect → respond → hunt → govern
+   17        01-08    12,16   09,21    22       23     25
+```
+
+- **Architect (17):** threat-model the target first; the model produces the
+  control list the rest of the run checks against.
+- **Build/ship (01–08, 12, 16):** the existing scan → triage → remediate pipeline.
+- **Detect (09, 21):** stand up detections; for any exploitable finding, emit the
+  rule that catches exploitation.
+- **Respond (22):** if the run finds an active incident, produce the timeline +
+  containment plan.
+- **Hunt (23):** turn the findings/intel into hunt hypotheses and run them.
+- **Govern (25):** map everything to a framework and produce the gap assessment.
+
+The output is one pass that designs, scans, detects, can respond, hunts, and
+reports compliance — with every irreversible step (apply a fix, detonate, isolate
+a host) behind a human gate. That is the end-to-end generalist deliverable.
+
 ## Done when
 
 - One command against your lab target produces a prioritized, cross-correlated,
   human-readable security report with concrete fixes — and you can defend every
   prioritization decision the copilot made by pointing at the evidence.
+- **v2:** the copilot spans architect → build → ship → detect → respond → hunt →
+  govern, each step backed by the module you built, irreversible actions gated.
 
 ---
 
-You now have a portfolio: eleven AI-augmented security tools and a copilot that
-orchestrates them. The throughline — *tools find candidates, AI scales the
-judgment, humans gate the irreversible* — is the thing to carry into real work.
+You now have a portfolio: ~20 AI-augmented security tools across the full
+lifecycle and a copilot that orchestrates them. The throughline — *tools find
+candidates, AI scales the judgment, humans gate the irreversible* — is the thing
+to carry into real work.
 
 ## Resources
 

@@ -85,13 +85,42 @@ which is exactly where AI augmentation pays off most.
 | 15 | [Zero Trust (ZTNA)](./modules/15-zero-trust-ztna) | Pomerium, OpenZiti, Teleport, SPIFFE/SPIRE, OPA, Istio | Least-privilege & microsegmentation policy synthesizer |
 | 16 | [Automation & Pipelines](./modules/16-automation-pipelines) | GitHub Actions, Terraform, CodeBuild/EventBridge | Build the headless scan→triage→report pipeline + CI gate + scheduled IaC |
 
+### Defensive Operations
+| # | Module | Tools you tour | What you build with AI |
+|---|--------|----------------|------------------------|
+| 21 | [Security Operations & SIEM](./modules/21-security-operations-siem) | Splunk/Elastic/Sentinel, Sysmon, OCSF/ECS, SOAR | NL→query (SPL/EQL/KQL) + an alert-triage copilot |
+| 22 | [Incident Response & Forensics](./modules/22-incident-response-forensics) | Volatility, Autopsy, plaso, YARA | DFIR artifact summarizer + incident report drafter |
+| 23 | [Threat Intelligence & Hunting](./modules/23-threat-intel-hunting) | MISP, OpenCTI, STIX/TAXII, Velociraptor | report→structured IOCs/TTPs + hunt-hypothesis generator |
+
+### Offensive Depth
+| # | Module | Tools you tour | What you build with AI |
+|---|--------|----------------|------------------------|
+| 24 | [Offensive Operations (Red Team)](./modules/24-offensive-operations) | BloodHound, Impacket, Sliver/Mythic, hashcat | AD kill-chain narrator + next-move advisor |
+| 04+ | [Advanced Web & API](./modules/04-dast-web) (extends 04) | Burp methodology, OWASP WSTG, API testing | multi-step exploit-chain construction |
+| 06+ | [Exploit Development](./modules/06-fuzzing) (extends 06) | ROP, heap grooming, ASLR/DEP/CFI bypass | crash→exploit-strategy reasoning |
+
+### Architecture, Identity, Crypto, Network
+| # | Module | Tools you tour | What you build with AI |
+|---|--------|----------------|------------------------|
+| 17 | [Security Architecture & Threat Modeling](./modules/17-security-architecture-threat-modeling) | STRIDE/PASTA, DFDs, pytm, attack trees | design→STRIDE threat model + control selection |
+| 20 | [Cryptography & Data Security](./modules/20-cryptography-data-security) | KMS/HSM, PKI, Vault, SOPS, DLP | crypto-misuse scanner + key/data risk review |
+| 19 | [Enterprise Identity & Access](./modules/19-enterprise-iam) | Okta/Entra/Keycloak, SAML/OIDC/SCIM, PAM | access-review + toxic-combination analyzer |
+| 18 | [Network Security](./modules/18-network-security) | nftables, WireGuard, Arkime, TLS/DNS | firewall-ruleset auditor + segmentation designer |
+
+### Governance
+| # | Module | Tools you tour | What you build with AI |
+|---|--------|----------------|------------------------|
+| 25 | [GRC, Risk & Compliance](./modules/25-grc-risk-compliance) | ISO 27001/SOC2/PCI/NIST, FAIR, OSCAL | control mapper + gap assessment + policy/evidence gen |
+
 ### Capstone
 | # | Module | Tools you tour | What you build with AI |
 |---|--------|----------------|------------------------|
-| ★ | [Capstone](./modules/capstone) | all of the above | An AI security copilot that orchestrates the toolchain |
+| ★ | [Capstone](./modules/capstone) | all of the above | A full-lifecycle AI security copilot (architect→build→detect→respond→hunt→govern) |
 
 Work the modules in order — later modules assume the `aug` patterns from
-earlier ones — or jump straight to whatever tool you need today.
+earlier ones — or jump straight to whatever tool you need today. The full
+generalist path (and how the later phases close every role gap) is in
+[`ROADMAP.md`](./ROADMAP.md).
 
 Every module has the same shape — a **`project/`** stub you build, a
 **`reference/`** worked solution to study, and an **`example-output/`** target.

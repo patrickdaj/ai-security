@@ -37,6 +37,19 @@ ports beyond localhost. Confirm with `docker compose -f labs/docker-compose.yml 
 - **LLM security (10):** garak and PyRIT ship their own probe targets; you can
   also stand up a small RAG app to red-team.
 
+## Lab targets for the generalist phases (modules 17–25)
+
+Heavier, mostly out-of-band targets — stand them up per module, **isolated and
+authorized only** (the offense/DFIR ones especially):
+
+- **Active Directory (M24):** [GOAD](https://github.com/Orange-Cyberdefense/GOAD)
+  or a vagrant AD build — run on an isolated host-only network.
+- **Threat intel (M23):** MISP and OpenCTI via their official docker-compose.
+- **DFIR images (M22):** public CTF disk/memory images and **defanged** malware
+  samples; analyze only in a no-network VM.
+- **SIEM (M21):** Splunk free or the Elastic Security docker stack.
+- **IAM (M19):** Keycloak via docker for OIDC/SAML and entitlement exports.
+
 ## Resources
 
 - [DVWA](https://github.com/digininja/DVWA)
