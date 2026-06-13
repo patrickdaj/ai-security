@@ -1,0 +1,122 @@
+{
+  "name": "SOAR — AI-routed alert triage",
+  "_comment": "Illustrative n8n export. Import into n8n and adjust node typeVersions to your release. Flow: an alert POSTs to the webhook -> the aug triage service returns a typed verdict -> a Switch routes by verdict to the right action. Replace the NoOp action nodes with your real Slack/Jira/PagerDuty nodes.",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "soar-alert",
+        "responseMode": "lastNode",
+        "options": {}
+      },
+      "id": "node-webhook",
+      "name": "Alert In (Webhook)",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [240, 320],
+      "webhookId": "soar-alert"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://host.docker.internal:8088/",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($json.body) }}",
+        "options": {}
+      },
+      "id": "node-triage",
+      "name": "AI Triage (aug service)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [480, 320]
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": { "caseSensitive": true, "typeValidation": "strict" },
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.verdict }}",
+                    "rightValue": "true_positive",
+                    "operator": { "type": "string", "operation": "equals" }
+                  }
+                ]
+              },
+              "renameOutput": true,
+              "outputKey": "true_positive"
+            },
+            {
+              "conditions": {
+                "options": { "caseSensitive": true, "typeValidation": "strict" },
+                "combinator": "and",
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.verdict }}",
+                    "rightValue": "false_positive",
+                    "operator": { "type": "string", "operation": "equals" }
+                  }
+                ]
+              },
+              "renameOutput": true,
+              "outputKey": "false_positive"
+            }
+          ]
+        },
+        "options": { "fallbackOutput": "extra", "renameFallbackOutput": "needs_review" }
+      },
+      "id": "node-switch",
+      "name": "Route by verdict",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3,
+      "position": [720, 320]
+    },
+    {
+      "parameters": {},
+      "id": "node-tp",
+      "name": "Notify + open ticket  (swap for Slack/Jira)",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [980, 200]
+    },
+    {
+      "parameters": {},
+      "id": "node-fp",
+      "name": "Suppress + log  (false positive)",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [980, 360]
+    },
+    {
+      "parameters": {},
+      "id": "node-nr",
+      "name": "Queue for analyst  (needs review)",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [980, 500]
+    }
+  ],
+  "connections": {
+    "Alert In (Webhook)": {
+      "main": [[{ "node": "AI Triage (aug service)", "type": "main", "index": 0 }]]
+    },
+    "AI Triage (aug service)": {
+      "main": [[{ "node": "Route by verdict", "type": "main", "index": 0 }]]
+    },
+    "Route by verdict": {
+      "main": [
+        [{ "node": "Notify + open ticket  (swap for Slack/Jira)", "type": "main", "index": 0 }],
+        [{ "node": "Suppress + log  (false positive)", "type": "main", "index": 0 }],
+        [{ "node": "Queue for analyst  (needs review)", "type": "main", "index": 0 }]
+      ]
+    }
+  },
+  "active": false,
+  "settings": { "executionOrder": "v1" },
+  "pinData": {},
+  "meta": {}
+}

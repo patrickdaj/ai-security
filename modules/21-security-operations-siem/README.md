@@ -15,7 +15,7 @@ adding a judgment layer to alert triage so analysts stop drowning.
   languages (SPL / EQL / KQL). Pick one to go deep; the concepts transfer.
 - **Sysmon** — rich Windows endpoint telemetry (the detection-engineer's lifeblood).
 - **OCSF / ECS** — the schemas you normalize disparate logs into.
-- **Shuffle / Tines** — open-source SOAR for response playbooks.
+- **Shuffle / Tines / n8n** — open-source SOAR for response playbooks.
 
 ### Tour tasks
 
@@ -55,6 +55,24 @@ move as SAST triage, applied to operations.
 - You can turn intent into a validated SIEM detection on a real backend, and run
   a labeled alert queue through a triage copilot that measurably cuts the noise.
 
+## SOAR with n8n (AI-routed playbook)
+
+The triage copilot decides; a SOAR tool acts. Build the low-code version:
+
+1. **Triage service** — [`project/triage_service.py`](./project/triage_service.py)
+   (worked answer: [`reference/triage_service.py`](./reference/triage_service.py))
+   is a tiny webhook that wraps the shared `aug` triage engine: POST an alert,
+   get back a typed verdict. Any SOAR can call it.
+2. **n8n workflow** — import [`reference/n8n/soar-triage.workflow.json`](./reference/n8n/soar-triage.workflow.json):
+   an alert hits a webhook → the workflow calls the triage service → a Switch
+   routes on `verdict` (true positive → notify + ticket; false positive →
+   suppress; needs review → analyst queue). See
+   [`example-output/soar-run.md`](./example-output/soar-run.md).
+
+Same "AI is the judgment layer, humans gate the irreversible" pattern as the
+Python pipeline (module 16) — but visual and analyst-readable. n8n's native LLM
+nodes can also do the triage inline if you'd rather not run the service.
+
 ## Resources
 
 Curated entry points to learn the tools and concepts for this module — official docs and authoritative references. They get you grounded; the build is still yours.
@@ -64,3 +82,4 @@ Curated entry points to learn the tools and concepts for this module — officia
 - [Microsoft Sentinel + KQL](https://learn.microsoft.com/en-us/azure/sentinel/)
 - [Sysmon (Sysinternals)](https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon)
 - [OCSF schema](https://schema.ocsf.io/) · [Elastic Common Schema (ECS)](https://www.elastic.co/guide/en/ecs/current/index.html)
+- [n8n docs](https://docs.n8n.io/) · [n8n AI / LangChain nodes](https://docs.n8n.io/advanced-ai/) · [Shuffle SOAR](https://shuffler.io/)

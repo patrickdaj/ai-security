@@ -82,3 +82,4 @@ Curated entry points to learn the tools and concepts for this module — officia
 - [Terraform docs](https://developer.hashicorp.com/terraform/docs)
 - [AWS CodeBuild](https://docs.aws.amazon.com/codebuild/)
 - [Stratus Red Team](https://stratus-red-team.cloud/)
+- [n8n docs](https://docs.n8n.io/) — low-code alternative for orchestrating the scan→triage→notify flow (a SOAR build lives in [module 21](../21-security-operations-siem/README.md))
