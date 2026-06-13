@@ -32,21 +32,25 @@ Status: **Scaffolded** = README + stub + reference + example-output committed,
 ready for you to build. **Done** = you've completed the `project/` and shipped
 the deliverable.
 
-### Phase 1 — Defensive Operations
+Phases run in module order. If you're optimizing for fastest employability,
+**Defensive Operations (Phase 2)** has the biggest day-to-day-relevant gaps — do
+it first if you prefer; the modules are independent.
+
+### Phase 1 — Architecture & Core Domains
+- [ ] **M17 Security Architecture & Threat Modeling** — _Scaffolded_
+- [ ] **M18 Network Security Engineering** — _Scaffolded_
+- [ ] **M19 Enterprise Identity & Access Governance** — _Scaffolded_
+- [ ] **M20 Cryptography & Data Security** — _Scaffolded_
+
+### Phase 2 — Defensive Operations
 - [ ] **M21 Security Operations & SIEM** — _Scaffolded_
 - [ ] **M22 Incident Response & Digital Forensics** — _Scaffolded_
 - [ ] **M23 Threat Intelligence & Hunting** — _Scaffolded_
 
-### Phase 2 — Offensive Depth
+### Phase 3 — Offensive Depth
 - [ ] **M24 Offensive Operations (Red Team)** — _Scaffolded_
 - [ ] **M04 Advanced Web & API Exploitation** (extends module 04) — _Scaffolded_
-- [ ] **M06/07 Exploit Development** (extends modules 06/07) — _Scaffolded_
-
-### Phase 3 — Architecture, Identity, Crypto, Network
-- [ ] **M17 Security Architecture & Threat Modeling** — _Scaffolded_
-- [ ] **M20 Cryptography & Data Security** — _Scaffolded_
-- [ ] **M19 Enterprise Identity & Access Governance** — _Scaffolded_
-- [ ] **M18 Network Security Engineering** — _Scaffolded_
+- [ ] **M06 Exploit Development** (extends module 06) — _Scaffolded_
 
 ### Phase 4 — Governance & end-to-end tie-off
 - [ ] **M25 GRC, Risk & Compliance** — _Scaffolded_

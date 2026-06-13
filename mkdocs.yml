@@ -78,17 +78,17 @@ nav:
       - 14 — Host Hardening & Compliance: modules/14-host-hardening-compliance.md
       - 15 — Zero Trust (ZTNA): modules/15-zero-trust-ztna.md
       - 16 — Automation & Pipelines: modules/16-automation-pipelines.md
+  - Architecture & Core Domains:
+      - 17 — Security Architecture & Threat Modeling: modules/17-security-architecture-threat-modeling.md
+      - 18 — Network Security: modules/18-network-security.md
+      - 19 — Enterprise Identity & Access: modules/19-enterprise-iam.md
+      - 20 — Cryptography & Data Security: modules/20-cryptography-data-security.md
   - Defensive Operations:
       - 21 — Security Operations & SIEM: modules/21-security-operations-siem.md
       - 22 — Incident Response & Forensics: modules/22-incident-response-forensics.md
       - 23 — Threat Intelligence & Hunting: modules/23-threat-intel-hunting.md
   - Offensive Depth:
       - 24 — Offensive Operations (Red Team): modules/24-offensive-operations.md
-  - Architecture, Identity, Crypto, Network:
-      - 17 — Security Architecture & Threat Modeling: modules/17-security-architecture-threat-modeling.md
-      - 20 — Cryptography & Data Security: modules/20-cryptography-data-security.md
-      - 19 — Enterprise Identity & Access: modules/19-enterprise-iam.md
-      - 18 — Network Security: modules/18-network-security.md
   - Governance:
       - 25 — GRC, Risk & Compliance: modules/25-grc-risk-compliance.md
   - Capstone: modules/capstone.md

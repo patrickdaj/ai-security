@@ -85,6 +85,14 @@ which is exactly where AI augmentation pays off most.
 | 15 | [Zero Trust (ZTNA)](./modules/15-zero-trust-ztna) | Pomerium, OpenZiti, Teleport, SPIFFE/SPIRE, OPA, Istio | Least-privilege & microsegmentation policy synthesizer |
 | 16 | [Automation & Pipelines](./modules/16-automation-pipelines) | GitHub Actions, Terraform, CodeBuild/EventBridge | Build the headless scan→triage→report pipeline + CI gate + scheduled IaC |
 
+### Architecture & Core Domains
+| # | Module | Tools you tour | What you build with AI |
+|---|--------|----------------|------------------------|
+| 17 | [Security Architecture & Threat Modeling](./modules/17-security-architecture-threat-modeling) | STRIDE/PASTA, DFDs, pytm, attack trees | design→STRIDE threat model + control selection |
+| 18 | [Network Security](./modules/18-network-security) | nftables, WireGuard, Arkime, TLS/DNS | firewall-ruleset auditor + segmentation designer |
+| 19 | [Enterprise Identity & Access](./modules/19-enterprise-iam) | Okta/Entra/Keycloak, SAML/OIDC/SCIM, PAM | access-review + toxic-combination analyzer |
+| 20 | [Cryptography & Data Security](./modules/20-cryptography-data-security) | KMS/HSM, PKI, Vault, SOPS, DLP | crypto-misuse scanner + key/data risk review |
+
 ### Defensive Operations
 | # | Module | Tools you tour | What you build with AI |
 |---|--------|----------------|------------------------|
@@ -98,14 +106,6 @@ which is exactly where AI augmentation pays off most.
 | 24 | [Offensive Operations (Red Team)](./modules/24-offensive-operations) | BloodHound, Impacket, Sliver/Mythic, hashcat | AD kill-chain narrator + next-move advisor |
 | 04+ | [Advanced Web & API](./modules/04-dast-web) (extends 04) | Burp methodology, OWASP WSTG, API testing | multi-step exploit-chain construction |
 | 06+ | [Exploit Development](./modules/06-fuzzing) (extends 06) | ROP, heap grooming, ASLR/DEP/CFI bypass | crash→exploit-strategy reasoning |
-
-### Architecture, Identity, Crypto, Network
-| # | Module | Tools you tour | What you build with AI |
-|---|--------|----------------|------------------------|
-| 17 | [Security Architecture & Threat Modeling](./modules/17-security-architecture-threat-modeling) | STRIDE/PASTA, DFDs, pytm, attack trees | design→STRIDE threat model + control selection |
-| 20 | [Cryptography & Data Security](./modules/20-cryptography-data-security) | KMS/HSM, PKI, Vault, SOPS, DLP | crypto-misuse scanner + key/data risk review |
-| 19 | [Enterprise Identity & Access](./modules/19-enterprise-iam) | Okta/Entra/Keycloak, SAML/OIDC/SCIM, PAM | access-review + toxic-combination analyzer |
-| 18 | [Network Security](./modules/18-network-security) | nftables, WireGuard, Arkime, TLS/DNS | firewall-ruleset auditor + segmentation designer |
 
 ### Governance
 | # | Module | Tools you tour | What you build with AI |
