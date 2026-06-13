@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://patrickdaj.github.io/ai-security/modules/03-supply-chain/">
+        <link rel="canonical" href="https://patrickdaj.github.io/ai-security/modules/24-offensive-operations/">
       
       
-        <link rel="prev" href="../02-secrets/">
+        <link rel="prev" href="../23-threat-intel-hunting/">
       
       
-        <link rel="next" href="../04-dast-web/">
+        <link rel="next" href="../17-security-architecture-threat-modeling/">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>03 — Supply Chain - AI Security Engineering Curriculum</title>
+        <title>24 — Offensive Operations (Red Team) - AI Security Engineering Curriculum</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#module-03-supply-chain-sbom" class="md-skip">
+        <a href="#module-24-offensive-operations-red-team" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              03 — Supply Chain
+              24 — Offensive Operations (Red Team)
             
           </span>
         </div>
@@ -508,8 +508,6 @@
       
   
   
-    
-  
   
   
     
@@ -522,11 +520,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
         
           
           <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
@@ -547,7 +545,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             
@@ -618,37 +616,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    03 — Supply Chain
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../03-supply-chain/" class="md-nav__link">
         
   
   
@@ -664,98 +635,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#tools-you-tour" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tools you tour
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Tools you tour">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#tour-tasks" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tour tasks
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ai-augmentation-reachability-risk-narrative-generator" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        AI augmentation: reachability + risk-narrative generator
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#exercises" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Exercises
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#done-when" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Done when
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#resources" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Resources
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1515,8 +1394,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -1527,11 +1408,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" checked>
         
           
           <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="">
@@ -1552,7 +1433,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_14">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1567,10 +1448,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../24-offensive-operations/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    24 — Offensive Operations (Red Team)
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1586,6 +1494,98 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tools-you-tour" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tools you tour
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tools you tour">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tour-tasks-your-lab-ad-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tour tasks (your lab AD only)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ai-augmentation-attack-path-narrator-next-move-advisor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI augmentation: attack-path narrator + next-move advisor
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercises" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercises
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#done-when" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Done when
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resources
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1922,10 +1922,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#tour-tasks" class="md-nav__link">
+  <a href="#tour-tasks-your-lab-ad-only" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tour tasks
+        Tour tasks (your lab AD only)
       
     </span>
   </a>
@@ -1938,10 +1938,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ai-augmentation-reachability-risk-narrative-generator" class="md-nav__link">
+  <a href="#ai-augmentation-attack-path-narrator-next-move-advisor" class="md-nav__link">
     <span class="md-ellipsis">
       
-        AI augmentation: reachability + risk-narrative generator
+        AI augmentation: attack-path narrator + next-move advisor
       
     </span>
   </a>
@@ -1998,63 +1998,67 @@
 
 
 
-<h1 id="module-03-supply-chain-sbom">Module 03 — Supply Chain &amp; SBOM<a class="headerlink" href="#module-03-supply-chain-sbom" title="Permanent link">&para;</a></h1>
+<h1 id="module-24-offensive-operations-red-team">Module 24 — Offensive Operations (Red Team)<a class="headerlink" href="#module-24-offensive-operations-red-team" title="Permanent link">&para;</a></h1>
 <p><a href="https://codespaces.new/patrickdaj/ai-security?quickstart=1"><img alt="Open in GitHub Codespaces" src="https://github.com/codespaces/badge.svg" /></a></p>
 <blockquote>
 <p>Opens a ready-to-build cloud environment (Python + scanners pre-installed). Build in <code>project/</code>; the worked answer is in <code>reference/</code>.</p>
 </blockquote>
-<p>Dependency scanners enumerate your packages and match them against vulnerability
-databases. They are precise about <em>what version you have</em> and useless about
-<em>whether the vulnerable code path is reachable in your app</em>. That reachability
-gap is the entire game, and it's where AI judgment plus a little code context
-pays off enormously.</p>
+<p>Phase: <strong>Offensive Depth.</strong> The earlier offensive modules find <em>vulnerabilities</em>;
+this one is operating as an adversary through the <strong>kill chain</strong> — initial
+access, Active Directory attack, privilege escalation, lateral movement, C2,
+exfil. It's what makes the purple-team capstone credible from the red side and
+what "red team" actually means on a job description.</p>
+<blockquote>
+<p><strong>Authorization gate — non-negotiable.</strong> Everything here runs against a lab AD
+range you own (GOAD or a vagrant build) or a written, scoped engagement.
+Attacking systems without authorization is a crime. The AI augmentation
+reasons and reports; it does not lower this bar.</p>
+</blockquote>
 <h2 id="tools-you-tour">Tools you tour<a class="headerlink" href="#tools-you-tour" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Syft</strong> — generates an SBOM (software bill of materials) from images/dirs.</li>
-<li><strong>Grype</strong> — matches an SBOM against vuln data; pairs with Syft.</li>
-<li><strong>Trivy</strong> — all-in-one: SBOM, vulns, IaC, secrets — great breadth.</li>
-<li><strong>OSV-Scanner</strong> — Google's scanner over the OSV database; excellent data.</li>
+<li><strong>BloodHound / SharpHound</strong> — graph AD attack paths to Domain Admin.</li>
+<li><strong>Impacket</strong> — Kerberoasting, AS-REP roasting, NTLM relay, secretsdump.</li>
+<li><strong>NetExec (CrackMapExec)</strong> — spray, enumerate, move laterally.</li>
+<li><strong>Sliver / Mythic</strong> — open-source C2 frameworks (beacons, tasking, OPSEC).</li>
+<li><strong>hashcat</strong> — crack the hashes you collect.</li>
 </ul>
-<h3 id="tour-tasks">Tour tasks<a class="headerlink" href="#tour-tasks" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>syft<span class="w"> </span>dir:labs/vuln-app<span class="w"> </span>-o<span class="w"> </span>json<span class="w"> </span>&gt;<span class="w"> </span>scratch/sbom.json
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>grype<span class="w"> </span>sbom:scratch/sbom.json<span class="w"> </span>-o<span class="w"> </span>json<span class="w"> </span>&gt;<span class="w"> </span>scratch/grype.json
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>osv-scanner<span class="w"> </span>--lockfile<span class="w"> </span>labs/vuln-app/requirements.txt<span class="w"> </span>--format<span class="w"> </span>json<span class="w"> </span>&gt;<span class="w"> </span>scratch/osv.json
+<h3 id="tour-tasks-your-lab-ad-only">Tour tasks (your lab AD only)<a class="headerlink" href="#tour-tasks-your-lab-ad-only" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Collect the graph, then ask BloodHound for the shortest path to DA.</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>SharpHound.exe<span class="w"> </span>-c<span class="w"> </span>All
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># Kerberoast and crack</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>impacket-GetUserSPNs<span class="w"> </span>-request<span class="w"> </span>-dc-ip<span class="w"> </span><span class="m">10</span>.0.0.10<span class="w"> </span>lab.local/user
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>hashcat<span class="w"> </span>-m<span class="w"> </span><span class="m">13100</span><span class="w"> </span>hashes.txt<span class="w"> </span>rockyou.txt
 </code></pre></div>
-<p>Notice the volume. A medium app yields hundreds of CVEs, most in transitive deps
-you never call. Triaging by hand is hopeless; that's the point.</p>
-<h2 id="ai-augmentation-reachability-risk-narrative-generator">AI augmentation: reachability + risk-narrative generator<a class="headerlink" href="#ai-augmentation-reachability-risk-narrative-generator" title="Permanent link">&para;</a></h2>
-<p>Build a tool that, for each CVE, gathers (a) the advisory text, (b) the affected
-function/symbol if the advisory names one, and (c) whether your code imports or
-calls into that package's vulnerable surface. Feed all of it to the model and
-ask for a reachability verdict and a one-paragraph risk narrative a human can
-act on.</p>
-<p>Map each Grype/OSV match to a <code>Finding</code> with the advisory in <code>.context</code>, then
-extend the triage to answer "is the vulnerable code path reachable from our
-entry points?" The model won't be certain — that's fine; surface confidence and
-let it say <code>needs_review</code>.</p>
+<h2 id="ai-augmentation-attack-path-narrator-next-move-advisor">AI augmentation: attack-path narrator + next-move advisor<a class="headerlink" href="#ai-augmentation-attack-path-narrator-next-move-advisor" title="Permanent link">&para;</a></h2>
+<p>Build a tool that takes the BloodHound path data (or your enum output) and
+returns a typed <a href="https://github.com/patrickdaj/ai-security/blob/main/aug/models.py"><code>AttackPath</code></a>: the kill chain hop by hop,
+the <strong>next move</strong> to take, and — because you're really doing purple — the
+<strong>single change that breaks the path</strong> for the defenders. See
+<a href="https://github.com/patrickdaj/ai-security/tree/main/modules/24-offensive-operations/project"><code>project/</code></a> / <a href="https://github.com/patrickdaj/ai-security/tree/main/modules/24-offensive-operations/reference"><code>reference/</code></a>. The model reasons over the
+graph the tools computed; it does not invent edges (same discipline as the CIEM
+module 11). It also drafts the engagement report.</p>
 <h2 id="exercises">Exercises<a class="headerlink" href="#exercises" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Normalize Grype + OSV output into <code>Finding</code>s and dedup across scanners.</li>
-<li>Add import-graph evidence: grep your codebase for imports of the affected
-   package and include call sites in <code>.context</code>. Measure how much it sharpens
-   the reachability call.</li>
-<li>Generate an executive risk narrative for the top 10 by adjusted severity —
-   the thing you'd actually paste into a ticket or a report.</li>
+<li>Walk a full path from a low-priv user to Domain Admin in your lab; have the
+   model narrate each hop and propose the next technique.</li>
+<li>For each hop, get the defensive fix and hand it to module 09/21 as a detection.</li>
+<li>Run a Sliver beacon through the chain and document OPSEC choices (jitter,
+   named pipes) and what telemetry they generate.</li>
 </ol>
 <h2 id="done-when">Done when<a class="headerlink" href="#done-when" title="Permanent link">&para;</a></h2>
 <ul>
-<li>You can take a 300-CVE Grype dump and produce a ranked shortlist of <em>reachable</em>
-  issues with human-readable risk narratives, plus an honest "needs review"
-  bucket for the ones the evidence can't decide.</li>
+<li>You can take a lab from a foothold to domain dominance, narrate the kill chain
+  with the next move at each step, and produce both an engagement report and the
+  detections that would have caught you.</li>
 </ul>
 <h2 id="resources">Resources<a class="headerlink" href="#resources" title="Permanent link">&para;</a></h2>
 <p>Curated entry points to learn the tools and concepts for this module — official docs and authoritative references. They get you grounded; the build is still yours.</p>
 <ul>
-<li><a href="https://github.com/anchore/syft">Syft</a></li>
-<li><a href="https://github.com/anchore/grype">Grype</a></li>
-<li><a href="https://google.github.io/osv-scanner/">OSV &amp; OSV-Scanner</a></li>
-<li><a href="https://trivy.dev/">Trivy</a></li>
-<li><a href="https://www.cisa.gov/sbom">CISA SBOM</a></li>
+<li><a href="https://bloodhound.specterops.io/">BloodHound docs</a></li>
+<li><a href="https://github.com/fortra/impacket">Impacket</a> · <a href="https://www.netexec.wiki/">NetExec</a></li>
+<li><a href="https://sliver.sh/docs">Sliver C2</a> · <a href="https://docs.mythic-c2.net/">Mythic C2</a></li>
+<li><a href="https://github.com/Orange-Cyberdefense/GOAD">GOAD — Game of Active Directory lab</a></li>
+<li><a href="https://attack.mitre.org/">MITRE ATT&amp;CK</a> · <a href="https://www.thehacker.recipes/">The Hacker Recipes (AD)</a></li>
 </ul>
 
 

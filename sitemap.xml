@@ -17,6 +17,10 @@
          <lastmod>2026-06-13</lastmod>
     </url>
     <url>
+         <loc>https://patrickdaj.github.io/ai-security/roadmap/</loc>
+         <lastmod>2026-06-13</lastmod>
+    </url>
+    <url>
          <loc>https://patrickdaj.github.io/ai-security/showcase/</loc>
          <lastmod>2026-06-13</lastmod>
     </url>
@@ -86,6 +90,42 @@
     </url>
     <url>
          <loc>https://patrickdaj.github.io/ai-security/modules/16-automation-pipelines/</loc>
+         <lastmod>2026-06-13</lastmod>
+    </url>
+    <url>
+         <loc>https://patrickdaj.github.io/ai-security/modules/17-security-architecture-threat-modeling/</loc>
+         <lastmod>2026-06-13</lastmod>
+    </url>
+    <url>
+         <loc>https://patrickdaj.github.io/ai-security/modules/18-network-security/</loc>
+         <lastmod>2026-06-13</lastmod>
+    </url>
+    <url>
+         <loc>https://patrickdaj.github.io/ai-security/modules/19-enterprise-iam/</loc>
+         <lastmod>2026-06-13</lastmod>
+    </url>
+    <url>
+         <loc>https://patrickdaj.github.io/ai-security/modules/20-cryptography-data-security/</loc>
+         <lastmod>2026-06-13</lastmod>
+    </url>
+    <url>
+         <loc>https://patrickdaj.github.io/ai-security/modules/21-security-operations-siem/</loc>
+         <lastmod>2026-06-13</lastmod>
+    </url>
+    <url>
+         <loc>https://patrickdaj.github.io/ai-security/modules/22-incident-response-forensics/</loc>
+         <lastmod>2026-06-13</lastmod>
+    </url>
+    <url>
+         <loc>https://patrickdaj.github.io/ai-security/modules/23-threat-intel-hunting/</loc>
+         <lastmod>2026-06-13</lastmod>
+    </url>
+    <url>
+         <loc>https://patrickdaj.github.io/ai-security/modules/24-offensive-operations/</loc>
+         <lastmod>2026-06-13</lastmod>
+    </url>
+    <url>
+         <loc>https://patrickdaj.github.io/ai-security/modules/25-grc-risk-compliance/</loc>
          <lastmod>2026-06-13</lastmod>
     </url>
     <url>
