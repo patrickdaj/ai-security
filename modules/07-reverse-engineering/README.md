@@ -1,5 +1,10 @@
 # Module 07 — Reverse Engineering
 
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/patrickdaj/ai-security?quickstart=1)
+
+> Opens a ready-to-build cloud environment (Python + scanners pre-installed). Build in `project/`; the worked answer is in `reference/`.
+
+
 RE tools turn binaries into something readable: disassembly, decompiled C,
 control-flow graphs. The output is correct but *unlabeled* — `FUN_00401a20`,
 `uVar3`, no comments. The slow part of RE is building a mental model of what the

@@ -1,5 +1,10 @@
 # Module 02 — Secrets Detection
 
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/patrickdaj/ai-security?quickstart=1)
+
+> Opens a ready-to-build cloud environment (Python + scanners pre-installed). Build in `project/`; the worked answer is in `reference/`.
+
+
 Secret scanners find high-entropy strings and known credential patterns in code
 and git history. The problem: most hits are example keys, test fixtures, rotated
 creds, or random base64 that *looks* like a secret. AI is excellent at the

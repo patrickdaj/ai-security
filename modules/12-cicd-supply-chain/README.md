@@ -1,5 +1,10 @@
 # Module 12 — CI/CD & Artifact Integrity
 
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/patrickdaj/ai-security?quickstart=1)
+
+> Opens a ready-to-build cloud environment (Python + scanners pre-installed). Build in `project/`; the worked answer is in `reference/`.
+
+
 Phase: **Infrastructure & Runtime.** Your pipeline is infrastructure with write
 access to production and a hoard of secrets. Attackers know it: poisoned
 pipeline execution, leaked `GITHUB_TOKEN`, dependency confusion, unsigned

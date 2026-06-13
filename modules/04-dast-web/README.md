@@ -1,5 +1,10 @@
 # Module 04 — Dynamic Web Security (DAST)
 
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/patrickdaj/ai-security?quickstart=1)
+
+> Opens a ready-to-build cloud environment (Python + scanners pre-installed). Build in `project/`; the worked answer is in `reference/`.
+
+
 Dynamic tools attack a *running* app. They're great at breadth (crawl, fuzz
 params, fling payloads) and weak at two things AI helps with: writing precise
 detection logic for a *newly disclosed* bug, and triaging a noisy scan into the

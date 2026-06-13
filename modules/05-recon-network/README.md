@@ -1,5 +1,10 @@
 # Module 05 — Recon & Network Analysis
 
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/patrickdaj/ai-security?quickstart=1)
+
+> Opens a ready-to-build cloud environment (Python + scanners pre-installed). Build in `project/`; the worked answer is in `reference/`.
+
+
 Network tooling produces *volume*: port-scan output, hours of flow logs,
 gigabytes of packets. Humans drown. The AI augmentation here is summarization
 and rule-drafting — turning raw telemetry into "here's what's interesting and

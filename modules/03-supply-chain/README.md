@@ -1,5 +1,10 @@
 # Module 03 — Supply Chain & SBOM
 
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/patrickdaj/ai-security?quickstart=1)
+
+> Opens a ready-to-build cloud environment (Python + scanners pre-installed). Build in `project/`; the worked answer is in `reference/`.
+
+
 Dependency scanners enumerate your packages and match them against vulnerability
 databases. They are precise about *what version you have* and useless about
 *whether the vulnerable code path is reachable in your app*. That reachability

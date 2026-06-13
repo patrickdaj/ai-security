@@ -1,5 +1,10 @@
 # Module 00 — Foundations & Lab
 
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/patrickdaj/ai-security?quickstart=1)
+
+> Opens a ready-to-build cloud environment (Python + scanners pre-installed). Build in `project/`; the worked answer is in `reference/`.
+
+
 Before touring tools, you set up two things: a **safe lab** to attack, and the
 **`aug` augmentation library** that every later module wires into. You also
 ground yourself in the mental model that makes the rest of the curriculum

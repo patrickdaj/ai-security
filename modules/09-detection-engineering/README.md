@@ -1,5 +1,10 @@
 # Module 09 — Detection Engineering
 
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/patrickdaj/ai-security?quickstart=1)
+
+> Opens a ready-to-build cloud environment (Python + scanners pre-installed). Build in `project/`; the worked answer is in `reference/`.
+
+
 Detection engineering is the discipline of turning attacker behavior into
 reliable alerts. The bottlenecks are *authoring* good detections from threat
 intel and *triaging* the alert firehose. AI helps with both: synthesizing Sigma

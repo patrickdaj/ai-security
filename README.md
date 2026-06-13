@@ -1,5 +1,10 @@
 # Hardcore AI Security Engineering Curriculum
 
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/patrickdaj/ai-security?quickstart=1)
+
+> One click to a ready-to-build environment — the [devcontainer](./.devcontainer/devcontainer.json) installs the package and core scanners.
+
+
 A self-driven, project-heavy curriculum that tours the open-source security
 engineering toolchain — SAST, fuzzing, RE, supply chain, detection
 engineering, cloud, LLM security — and then **augments each tool with AI**.

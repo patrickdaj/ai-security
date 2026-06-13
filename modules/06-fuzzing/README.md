@@ -1,5 +1,10 @@
 # Module 06 — Fuzzing
 
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/patrickdaj/ai-security?quickstart=1)
+
+> Opens a ready-to-build cloud environment (Python + scanners pre-installed). Build in `project/`; the worked answer is in `reference/`.
+
+
 Fuzzers throw mutated inputs at a target to find crashes. They're brilliant at
 exploration and terrible at two human-heavy chores: *writing the harness* in the
 first place, and *triaging a pile of crashes* (which are unique? which are

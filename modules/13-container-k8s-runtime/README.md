@@ -1,5 +1,10 @@
 # Module 13 — Containers & Kubernetes Runtime
 
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/patrickdaj/ai-security?quickstart=1)
+
+> Opens a ready-to-build cloud environment (Python + scanners pre-installed). Build in `project/`; the worked answer is in `reference/`.
+
+
 Phase: **Infrastructure & Runtime.** Module 08 checked cluster config *before*
 deploy. This module is about *runtime*: what's actually happening inside running
 containers, and stopping bad things at the admission gate. Runtime tools emit a

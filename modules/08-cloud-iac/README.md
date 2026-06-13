@@ -1,5 +1,10 @@
 # Module 08 — Cloud & Infrastructure-as-Code
 
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/patrickdaj/ai-security?quickstart=1)
+
+> Opens a ready-to-build cloud environment (Python + scanners pre-installed). Build in `project/`; the worked answer is in `reference/`.
+
+
 Cloud/IaC scanners check Terraform, CloudFormation, Kubernetes, and live cloud
 config against best-practice policies. They tell you *what's wrong* precisely and
 leave you to figure out *the exact fix in your codebase* — which is where AI

@@ -1,5 +1,10 @@
 # Module 14 — Host Hardening & Compliance-as-Code
 
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/patrickdaj/ai-security?quickstart=1)
+
+> Opens a ready-to-build cloud environment (Python + scanners pre-installed). Build in `project/`; the worked answer is in `reference/`.
+
+
 Phase: **Infrastructure & Runtime.** Below the cloud and cluster layers are
 actual hosts that drift from their hardened baseline and must answer to
 compliance frameworks. Scanners tell you *which* control failed precisely;

@@ -1,5 +1,10 @@
 # Module 16 — Security Automation & Pipelines
 
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/patrickdaj/ai-security?quickstart=1)
+
+> Opens a ready-to-build cloud environment (Python + scanners pre-installed). Build in `project/`; the worked answer is in `reference/`.
+
+
 Phase: **Infrastructure & Runtime.** Everything you've built so far runs by hand.
 This module is where *you* turn it into automation: a headless pipeline, a CI
 gate, and Terraform that runs it on a schedule. The deliverable is a system that

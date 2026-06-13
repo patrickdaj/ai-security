@@ -1,4 +1,5 @@
 site_name: AI Security Engineering Curriculum
+site_url: https://patrickdaj.github.io/ai-security/
 site_description: >-
   A hardcore, project-driven curriculum that tours the open-source security
   toolchain and augments each tool with AI (Claude or a local model).

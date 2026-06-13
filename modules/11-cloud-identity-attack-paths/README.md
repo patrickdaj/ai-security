@@ -1,5 +1,10 @@
 # Module 11 — Cloud Identity & Attack Paths (CIEM)
 
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/patrickdaj/ai-security?quickstart=1)
+
+> Opens a ready-to-build cloud environment (Python + scanners pre-installed). Build in `project/`; the worked answer is in `reference/`.
+
+
 Phase: **Infrastructure & Runtime.** Cloud breaches are usually identity
 breaches: an over-permissioned role, a forgotten access key, a chain of
 `iam:PassRole` + `sts:AssumeRole` that walks a low-priv principal to admin.

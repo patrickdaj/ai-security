@@ -1,5 +1,10 @@
 # Module 10 — LLM / ML Security
 
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/patrickdaj/ai-security?quickstart=1)
+
+> Opens a ready-to-build cloud environment (Python + scanners pre-installed). Build in `project/`; the worked answer is in `reference/`.
+
+
 The meta-module: securing AI systems themselves. Now that you've used AI to
 augment security tools, you flip it around and learn to *attack and defend*
 LLM-powered applications — prompt injection, jailbreaks, data exfiltration,

@@ -1,0 +1,21 @@
+{
+  "name": "ai-security-curriculum",
+  "image": "mcr.microsoft.com/devcontainers/python:3.12",
+  "features": {
+    "ghcr.io/devcontainers/features/terraform:1": {},
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  "postCreateCommand": "bash .devcontainer/setup.sh",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "charliermarsh.ruff",
+        "hashicorp.terraform"
+      ]
+    }
+  },
+  "remoteEnv": {
+    "AUG_BACKEND": "anthropic"
+  }
+}

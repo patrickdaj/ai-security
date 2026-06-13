@@ -1,5 +1,10 @@
 # Module 15 — Zero Trust Network Access (ZTNA)
 
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/patrickdaj/ai-security?quickstart=1)
+
+> Opens a ready-to-build cloud environment (Python + scanners pre-installed). Build in `project/`; the worked answer is in `reference/`.
+
+
 Phase: **Infrastructure & Runtime.** The perimeter is gone; "on the network" is
 not authorization. Zero Trust means every request is authenticated, authorized,
 and encrypted per-identity, with least-privilege microsegmentation. The

@@ -1,5 +1,10 @@
 # Module 01 — Static Analysis (SAST)
 
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/patrickdaj/ai-security?quickstart=1)
+
+> Opens a ready-to-build cloud environment (Python + scanners pre-installed). Build in `project/`; the worked answer is in `reference/`.
+
+
 Static analysis tools read code without running it and flag patterns that *may*
 be bugs. Their fatal weakness is the false-positive flood: they over-report
 because they can't reason about reachability or intent. This is the canonical

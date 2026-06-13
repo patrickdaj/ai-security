@@ -1,5 +1,10 @@
 # Capstone — The AI Security Copilot
 
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/patrickdaj/ai-security?quickstart=1)
+
+> Opens a ready-to-build cloud environment (Python + scanners pre-installed). Build in `project/`; the worked answer is in `reference/`.
+
+
 Tie the modules together into one tool: an agent that orchestrates the
 deterministic security tooling you've toured and applies AI judgment across the
 whole pipeline. This is where you go from "eleven scripts" to "a system."
